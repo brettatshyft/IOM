@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Chair" representedClassName="Chair" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime0" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime4" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime5" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endTime6" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime0" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime4" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime5" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startTime6" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="chairs" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="OtherInfusion" representedClassName="OtherInfusion" syncable="YES">
+        <attribute name="avgNewPatientsPerMonth" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="infusionTime" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="otherInfusionTypeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postTime" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepTime" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="treatmentsPerMonth" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="weeksBetween" optional="YES" attributeType="Integer 32" minValueString="0" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="otherInfusions" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="OtherInjection" representedClassName="OtherInjection" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="otherInjectionTypeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="treatmentsPerMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="otherInjections" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="PayerMix" representedClassName="PayerMix" syncable="YES">
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="payer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soc" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="spp" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="payerMixes" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="Presentation" representedClassName="Presentation" syncable="YES">
+        <attribute name="accountID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="patientPopulation" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="presentationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="presentationsIncluded" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="presentationTypeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeToCapacityReport" optional="YES" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="payerMixes" optional="YES" toMany="YES" maxCount="5" deletionRule="Cascade" destinationEntity="PayerMix" inverseName="presentation" inverseEntity="PayerMix" syncable="YES"/>
+        <relationship name="reimbursement" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Reimbursement" inverseName="presentation" inverseEntity="Reimbursement" syncable="YES"/>
+        <relationship name="scenarios" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Scenario" inverseName="presentation" inverseEntity="Scenario" syncable="YES"/>
+        <relationship name="utilization" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Utilization" inverseName="presentation" inverseEntity="Utilization" syncable="YES"/>
+        <relationship name="vialTrends" optional="YES" toMany="YES" maxCount="3" deletionRule="Cascade" destinationEntity="VialTrend" inverseName="presentation" inverseEntity="VialTrend" syncable="YES"/>
+    </entity>
+    <entity name="Reimbursement" representedClassName="Reimbursement" syncable="YES">
+        <attribute name="geographicArea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reimbursementFor96365" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="reimbursementFor96413" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="reimbursementFor96415" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="reimbursement" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="RemicadeInfusion" representedClassName="RemicadeInfusion" syncable="YES">
+        <attribute name="avgInfusionsPerMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="avgNewPatientsPerMonthQ6" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="avgNewPatientsPerMonthQ8" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percent2_5hr" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percent2hr" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percent3_5hr" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percent3hr" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="percent4hr" optional="YES" attributeType="Integer 16" maxValueString="100" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="remicadeInfusion" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="Scenario" representedClassName="Scenario" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="maxChairsPerStaff" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="5" defaultValueString="4" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="solutionDataNeedsToBeProcessed" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="chairs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Chair" inverseName="scenario" inverseEntity="Chair" syncable="YES"/>
+        <relationship name="otherInfusions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="OtherInfusion" inverseName="scenario" inverseEntity="OtherInfusion" syncable="YES"/>
+        <relationship name="otherInjections" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="OtherInjection" inverseName="scenario" inverseEntity="OtherInjection" syncable="YES"/>
+        <relationship name="presentation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="scenarios" inverseEntity="Presentation" syncable="YES"/>
+        <relationship name="remicadeInfusion" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="RemicadeInfusion" inverseName="scenario" inverseEntity="RemicadeInfusion" syncable="YES"/>
+        <relationship name="simponiAriaInfusion" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SimponiAriaInfusion" inverseName="scenario" inverseEntity="SimponiAriaInfusion" syncable="YES"/>
+        <relationship name="solutionData" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SolutionData" inverseName="scenario" inverseEntity="SolutionData" syncable="YES"/>
+        <relationship name="staff" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Staff" inverseName="scenario" inverseEntity="Staff" syncable="YES"/>
+        <relationship name="stelaraInfusion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StelaraInfusion" inverseName="scenario" inverseEntity="StelaraInfusion" syncable="YES"/>
+    </entity>
+    <entity name="ScenarioWidget" representedClassName="ScenarioWidget" syncable="YES">
+        <attribute name="infusionDist" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="infusionsPerWeek" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="makeAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="makeQHP" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="makeStaffAttention" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="makeTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postQHP" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepQHP" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="widgetType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="solutionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SolutionData" inverseName="scenarioWidgets" inverseEntity="SolutionData" syncable="YES"/>
+        <relationship name="solutionWidgetsInSchedule" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SolutionWidgetInSchedule" inverseName="scenarioWidget" inverseEntity="SolutionWidgetInSchedule" syncable="YES"/>
+    </entity>
+    <entity name="SimponiAriaInfusion" representedClassName="SimponiAriaInfusion" syncable="YES">
+        <attribute name="avgInfusionsPerMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="avgNewPatientsPerMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="infusionAdminTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="simponiAriaInfusion" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="SolutionData" representedClassName="SolutionData" syncable="YES">
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="solutionData" inverseEntity="Scenario" syncable="YES"/>
+        <relationship name="scenarioWidgets" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ScenarioWidget" inverseName="solutionData" inverseEntity="ScenarioWidget" syncable="YES"/>
+        <relationship name="solutionStatistics" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="SolutionStatistics" inverseName="solutionData" inverseEntity="SolutionStatistics" syncable="YES"/>
+    </entity>
+    <entity name="SolutionStatistics" representedClassName="SolutionStatistics" syncable="YES">
+        <attribute name="daysWithAtleastOneChairWithTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="maxChairsPerStaff" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalChairLimitOfStaffTypeAncillary" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalChairLimitOfStaffTypeQHP" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalChairs" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalChairTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalChairTimeUsedCurrentLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalChairTimeUsedFullLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalInfusion" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalInjection" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalMakeStaffAttentionUsedOfStaffTypeAncillaryCurrentLoad" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalMakeStaffAttentionUsedOfStaffTypeAncillaryFullLoad" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalMakeStaffAttentionUsedOfStaffTypeQHPCurrentLoad" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalMakeStaffAttentionUsedOfStaffTypeQHPFullLoad" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrimaryFocusOfStaffTypeAncillary" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrimaryFocusOfStaffTypeQHP" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrimaryFocusUsedOfStaffTypeAncillaryCurrentLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrimaryFocusUsedOfStaffTypeAncillaryFullLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrimaryFocusUsedOfStaffTypeQHPCurrentLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalPrimaryFocusUsedOfStaffTypeQHPFullLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalRemicadeCurrentLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalRemicadeFullLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalSimponiAriaCurrentLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalSimponiAriaFullLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalStelaraCurrentLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalStelaraFullLoad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="solutionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SolutionData" inverseName="solutionStatistics" inverseEntity="SolutionData" syncable="YES"/>
+    </entity>
+    <entity name="SolutionWidgetInSchedule" representedClassName="SolutionWidgetInSchedule" syncable="YES">
+        <attribute name="indexNum" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isFullLoad" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="makeStaffTypeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postStaffTypeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepStaffTypeID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="scheduleDay" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="scheduleMachine" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="scheduleTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="widgetType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenarioWidget" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ScenarioWidget" inverseName="solutionWidgetsInSchedule" inverseEntity="ScenarioWidget" syncable="YES"/>
+    </entity>
+    <entity name="Staff" representedClassName="Staff" syncable="YES">
+        <attribute name="breakEndTime0" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakEndTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakEndTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakEndTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakEndTime4" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakEndTime5" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakEndTime6" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime0" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime4" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime5" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="breakStartTime6" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="staffTypeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime0" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime4" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime5" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workEndTime6" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime0" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime1" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime2" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime3" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime4" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime5" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="workStartTime6" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scenario" inverseName="staff" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="StelaraInfusion" representedClassName="StelaraInfusion" syncable="YES">
+        <attribute name="avgInfusionsPerMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="avgNewPatientsPerMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="infusionAdminTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="postTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepAncillary" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="prepTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="scenario" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Scenario" inverseName="stelaraInfusion" inverseEntity="Scenario" syncable="YES"/>
+    </entity>
+    <entity name="Utilization" representedClassName="Utilization" syncable="YES">
+        <attribute name="otherIVBiologics" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="previous52WeeksIVPatients" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="previous52WeeksSubcutaneousPatients" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="remicadePatients" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="simponiAriaPatients" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="stelaraPatients" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="subcutaneousPatients" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="utilization" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="VialTrend" representedClassName="VialTrend" syncable="YES">
+        <attribute name="lastDataMonth" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueEightMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueElevenMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueFiveMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueFourMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueLastDataMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueNineMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueOneMonthBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueSevenMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueSixMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueTenMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueThreeMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="valueTwoMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="vialTrendTypeID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="vialTrends" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Chair" positionX="0" positionY="0" width="128" height="285"/>
+        <element name="OtherInfusion" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="OtherInjection" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="PayerMix" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="Presentation" positionX="0" positionY="0" width="128" height="240"/>
+        <element name="Reimbursement" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="RemicadeInfusion" positionX="0" positionY="0" width="128" height="240"/>
+        <element name="Scenario" positionX="0" positionY="0" width="128" height="255"/>
+        <element name="ScenarioWidget" positionX="0" positionY="0" width="128" height="270"/>
+        <element name="SimponiAriaInfusion" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="SolutionData" positionX="0" positionY="0" width="128" height="90"/>
+        <element name="SolutionStatistics" positionX="0" positionY="0" width="128" height="450"/>
+        <element name="SolutionWidgetInSchedule" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="Staff" positionX="0" positionY="0" width="128" height="510"/>
+        <element name="StelaraInfusion" positionX="18" positionY="162" width="128" height="165"/>
+        <element name="Utilization" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="VialTrend" positionX="0" positionY="0" width="128" height="270"/>
+    </elements>
+</model>

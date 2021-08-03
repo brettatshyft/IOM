@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SISIViewController">
+            <connections>
+                <outlet property="BothView" destination="aLm-Zr-XTx" id="yev-c2-kOg"/>
+                <outlet property="RemicadeHTMLView" destination="sJm-Od-ODx" id="eqZ-hc-B6D"/>
+                <outlet property="RemicadeHalfTextView" destination="EJM-18-60k" id="2r7-uK-sge"/>
+                <outlet property="RemicadeTextView" destination="dm7-3Z-oqO" id="Xn8-6j-eCp"/>
+                <outlet property="RemicadeView" destination="CbL-qv-7Ai" id="Inc-Ml-eYF"/>
+                <outlet property="SISIType" destination="r3e-iE-n01" id="L06-p5-QoV"/>
+                <outlet property="SISIView" destination="avz-Fl-a0x" id="6BF-98-UiH"/>
+                <outlet property="SimponiHTMLView" destination="hDe-0D-CfG" id="AkW-ON-Ogu"/>
+                <outlet property="SimponiHalfTextView" destination="Wpn-1F-SZw" id="feN-Cq-iTp"/>
+                <outlet property="SimponiTextView" destination="RlR-g8-wgt" id="3Bq-mb-EkM"/>
+                <outlet property="SimponiView" destination="leU-2a-SY7" id="BtB-So-lZ4"/>
+                <outlet property="StelaraHalfTextView" destination="UoH-fS-KT7" id="QaC-rz-s71"/>
+                <outlet property="StelaraTextView" destination="z3S-HF-QnS" id="gTF-Y2-HlE"/>
+                <outlet property="StelaraView" destination="a4H-j5-MmU" id="dfS-jb-cPM"/>
+                <outlet property="remicadeContainerStackView" destination="6HQ-fQ-DVP" id="Orl-Ov-317"/>
+                <outlet property="remicadeWebViewContainer" destination="NIk-kG-qwy" id="cOr-wS-Wh2"/>
+                <outlet property="simponiAriaContainerStackView" destination="8cj-Q7-oR2" id="L1d-3o-2oN"/>
+                <outlet property="simponiAriaSeperatorView" destination="2IP-Mp-6gW" id="Ma6-2O-QQM"/>
+                <outlet property="simponiWebViewContainer" destination="rbn-hk-doU" id="di7-Do-uxL"/>
+                <outlet property="stelaraContainerStackView" destination="Zb5-OG-Otg" id="uXR-X6-DsU"/>
+                <outlet property="stelaraHTMLView" destination="wjn-FC-lJh" id="DKY-Dm-gKH"/>
+                <outlet property="stelaraSeperatorView" destination="Ka1-lF-jfy" id="A67-qH-0M2"/>
+                <outlet property="stelaraWebViewContainer" destination="GAS-Oc-E0d" id="iuf-pF-efr"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="256"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzy-fO-rcL" userLabel="Half View">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="256"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SISI Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3e-iE-n01">
+                    <rect key="frame" x="387" y="85.5" width="250" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="DID-c7-Os5"/>
+                        <constraint firstAttribute="height" constant="21" id="kcf-3r-oVG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQm-Zg-wet" userLabel="Top Line">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="1"/>
+                    <color key="backgroundColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="d2i-1m-rkP"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avz-Fl-a0x" userLabel="SISIView">
+                    <rect key="frame" x="0.0" y="1" width="1024" height="255"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="avz-Fl-a0x" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="5MW-zy-YPV"/>
+                <constraint firstAttribute="bottom" secondItem="avz-Fl-a0x" secondAttribute="bottom" id="6Tq-sz-m8S"/>
+                <constraint firstItem="r3e-iE-n01" firstAttribute="centerY" secondItem="2" secondAttribute="centerY" multiplier="0.75" id="APb-fs-Fff"/>
+                <constraint firstItem="gzy-fO-rcL" firstAttribute="top" secondItem="2" secondAttribute="top" id="BGN-KQ-loY"/>
+                <constraint firstItem="gzy-fO-rcL" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="Tk0-sK-OG0"/>
+                <constraint firstItem="avz-Fl-a0x" firstAttribute="top" secondItem="aQm-Zg-wet" secondAttribute="bottom" id="Z99-Jd-lwP"/>
+                <constraint firstAttribute="bottom" secondItem="gzy-fO-rcL" secondAttribute="bottom" id="Zb0-2b-UOk"/>
+                <constraint firstAttribute="trailing" secondItem="gzy-fO-rcL" secondAttribute="trailing" id="foc-Um-mXn"/>
+                <constraint firstItem="aQm-Zg-wet" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="ghL-fD-zWk"/>
+                <constraint firstAttribute="trailing" secondItem="avz-Fl-a0x" secondAttribute="trailing" id="hUb-0Y-Hok"/>
+                <constraint firstItem="aQm-Zg-wet" firstAttribute="top" secondItem="2" secondAttribute="top" id="hVr-uM-yNc"/>
+                <constraint firstAttribute="trailing" secondItem="aQm-Zg-wet" secondAttribute="trailing" id="ifA-4v-kT9"/>
+                <constraint firstItem="r3e-iE-n01" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="xSy-mO-oHq"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="423.4375" y="161.1328125"/>
+        </view>
+        <view contentMode="scaleToFill" id="CbL-qv-7Ai" userLabel="Full View - Remicade">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="255"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gpY-tU-tu5">
+                    <rect key="frame" x="44" y="213" width="639" height="32"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remicade_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-jv-zuJ">
+                            <rect key="frame" x="0.0" y="0.0" width="147" height="32"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFm-HB-VEF" customClass="IOMCustomFontButton">
+                            <rect key="frame" x="177" y="0.0" width="220" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="IMPORTANT SAFETY INFORMATION">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="jumpToRemicadeInfo:" destination="-1" eventType="touchUpInside" id="InM-Jc-0eA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr5-6D-Fq7" customClass="IOMCustomFontButton">
+                            <rect key="frame" x="427" y="0.0" width="212" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="FULL PRESCRIBING INFORMATION">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="showRemicadePDF:" destination="-1" eventType="touchUpInside" id="sQI-Fi-bav"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IO0-Yd-7IO">
+                    <rect key="frame" x="970" y="20" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Hxn-Zb-WPh"/>
+                        <constraint firstAttribute="height" constant="44" id="Pns-jq-ZOq"/>
+                    </constraints>
+                    <state key="normal" image="sisiArrow_large.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showRemicadeHTMLView:" destination="-1" eventType="touchUpInside" id="SnM-Ua-GZK"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-3Z-oqO">
+                    <rect key="frame" x="44" y="10" width="926" height="203"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">SELECTED IMPORTANT SAFETY INFORMATION
+
+Serious and sometimes fatal side effects have been reported with REMICADE® (infliximab). Infections due to bacterial, mycobacterial, invasive fungal, viral, or other opportunistic pathogens (e.g., TB, histoplasmosis) have been reported. Lymphoma, including cases of fatal hepatosplenic T-cell lymphoma (HSTCL), and other malignancies have been reported, including in children and young adult patients. Due to the risk of HSTCL, mostly reported in Crohn’s disease and ulcerative colitis, assess the risk/benefit, especially if the patient is male and is receiving azathioprine or 6-mercaptopurine treatment. REMICADE® is contraindicated in patients with severe hypersensitivity reactions to REMICADE® and certain patients with congestive heart failure. Other serious side effects reported include melanoma and Merkel cell carcinoma, hepatitis B reactivation, hepatotoxicity, hematological events, hypersensitivity, neurological events, and lupus-like syndrome. Please see related and other Important Safety Information on pages</string>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gq-Uf-iqh">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="10"/>
+                    <color key="backgroundColor" red="0.28373104333877563" green="0.67685168981552124" blue="0.94951671361923218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="KRS-Ej-f1K"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gpY-tU-tu5" firstAttribute="top" secondItem="dm7-3Z-oqO" secondAttribute="bottom" id="0tH-iU-LXD"/>
+                <constraint firstAttribute="bottom" secondItem="gpY-tU-tu5" secondAttribute="bottom" constant="10" id="9yu-1x-cua"/>
+                <constraint firstAttribute="trailing" secondItem="7gq-Uf-iqh" secondAttribute="trailing" id="MDM-Rn-sPj"/>
+                <constraint firstAttribute="trailing" secondItem="IO0-Yd-7IO" secondAttribute="trailing" constant="10" id="RpE-Ey-QdI"/>
+                <constraint firstItem="dm7-3Z-oqO" firstAttribute="leading" secondItem="CbL-qv-7Ai" secondAttribute="leading" constant="44" id="Y98-aJ-9tl"/>
+                <constraint firstItem="7gq-Uf-iqh" firstAttribute="leading" secondItem="CbL-qv-7Ai" secondAttribute="leading" id="dlW-h3-89L"/>
+                <constraint firstItem="7gq-Uf-iqh" firstAttribute="top" secondItem="CbL-qv-7Ai" secondAttribute="top" id="iJN-23-plN"/>
+                <constraint firstItem="gpY-tU-tu5" firstAttribute="leading" secondItem="CbL-qv-7Ai" secondAttribute="leading" constant="44" id="jSq-xs-tbN"/>
+                <constraint firstItem="dm7-3Z-oqO" firstAttribute="top" secondItem="7gq-Uf-iqh" secondAttribute="bottom" id="k53-fh-wWY"/>
+                <constraint firstItem="IO0-Yd-7IO" firstAttribute="leading" secondItem="dm7-3Z-oqO" secondAttribute="trailing" id="xnB-WT-b3E"/>
+                <constraint firstItem="IO0-Yd-7IO" firstAttribute="top" secondItem="7gq-Uf-iqh" secondAttribute="bottom" constant="10" id="zxT-Kd-fcC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="423.4375" y="-41.30859375"/>
+        </view>
+        <view contentMode="scaleToFill" id="sJm-Od-ODx" userLabel="HTML View - Remicade">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="728"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remicade_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="BT4-7X-sAv">
+                    <rect key="frame" x="20" y="16" width="147" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="147" id="9fX-1A-vdL"/>
+                        <constraint firstAttribute="height" constant="32" id="N7T-tU-nvg"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Due-de-XiV" customClass="IOMCustomFontButton">
+                    <rect key="frame" x="192" y="20" width="240" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="IMPORTANT SAFETY INFORMATION">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpToRemicadeInfo:" destination="-1" eventType="touchUpInside" id="4gy-5z-9MX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPN-0u-zOa" customClass="IOMCustomFontButton">
+                    <rect key="frame" x="440" y="20" width="254" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="FULL PRESCRIBING INFORMATION">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showRemicadePDF:" destination="-1" eventType="touchUpInside" id="MOw-Gn-aqw"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iM5-QG-7IH">
+                    <rect key="frame" x="969" y="5" width="45" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="sisiArrow_large_close.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="hideRemicadeHTMLView:" destination="-1" eventType="touchUpInside" id="OZM-4Q-i1Q"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIk-kG-qwy">
+                    <rect key="frame" x="0.0" y="65" width="1024" height="663"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NIk-kG-qwy" firstAttribute="top" secondItem="BT4-7X-sAv" secondAttribute="bottom" constant="17" id="Bm8-9V-G0k"/>
+                <constraint firstItem="BT4-7X-sAv" firstAttribute="leading" secondItem="sJm-Od-ODx" secondAttribute="leading" constant="20" symbolic="YES" id="Ftl-mk-ew6"/>
+                <constraint firstItem="NIk-kG-qwy" firstAttribute="leading" secondItem="sJm-Od-ODx" secondAttribute="leading" id="NGw-v0-tcO"/>
+                <constraint firstAttribute="trailing" secondItem="NIk-kG-qwy" secondAttribute="trailing" id="SlN-Py-Un3"/>
+                <constraint firstItem="BT4-7X-sAv" firstAttribute="top" secondItem="sJm-Od-ODx" secondAttribute="top" constant="16" id="t2M-oX-wJz"/>
+                <constraint firstAttribute="bottom" secondItem="NIk-kG-qwy" secondAttribute="bottom" id="whI-rg-9tR"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-242" y="506"/>
+        </view>
+        <view contentMode="scaleToFill" id="leU-2a-SY7" userLabel="Full View - Simponi">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="255"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7jQ-h9-x6m">
+                    <rect key="frame" x="44" y="186" width="641" height="69"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simponi_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="x0F-cl-aRx">
+                            <rect key="frame" x="0.0" y="0.0" width="149" height="69"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="149" id="SNX-if-ACP"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltz-f5-Naz" customClass="IOMCustomFontButton">
+                            <rect key="frame" x="179" y="0.0" width="220" height="69"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="IMPORTANT SAFETY INFORMATION">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="jumpToSimponiInfo:" destination="-1" eventType="touchUpInside" id="Ih5-fQ-IAZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7A-LM-8oP" customClass="IOMCustomFontButton">
+                            <rect key="frame" x="429" y="0.0" width="212" height="69"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="FULL PRESCRIBING INFORMATION">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="showSimponiPDF:" destination="-1" eventType="touchUpInside" id="4dR-Bq-q0x"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="69" id="Erk-MX-Qu7"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pb-kP-SHv">
+                    <rect key="frame" x="970" y="20" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Y2b-4J-Ks3"/>
+                        <constraint firstAttribute="height" constant="44" id="xYl-Rw-R0q"/>
+                    </constraints>
+                    <state key="normal" image="sisiArrow_large.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showSimponiHTMLView:" destination="-1" eventType="touchUpInside" id="bNr-yw-Urp"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlR-g8-wgt">
+                    <rect key="frame" x="44" y="10" width="926" height="176"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">SELECTED IMPORTANT SAFETY INFORMATION
+
+Serious and sometimes fatal side effects have been reported with SIMPONI ARIA® (golimumab), including infections due to tuberculosis, invasive fungal infections (eg, histoplasmosis), bacterial, viral, or other opportunistic pathogens. Prior to initiating SIMPONI ARIA® and periodically during therapy, evaluate patients for active tuberculosis and test for latent infection. Lymphoma, including a rare and fatal cancer called hepatosplenic T-cell lymphoma, and other malignancies can occur in adults and children, and can be fatal. Other serious risks include melanoma and Merkel cell carcinoma, heart failure, demyelinating disorders, hypersensitivity reactions, and hepatitis B reactivation. Prior to initiating SIMPONI ARIA®, test patients for hepatitis B viral infection. Please see related and other Important Safety Information on pages</string>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlG-ia-iac">
+                    <rect key="frame" x="-2" y="0.0" width="1026" height="10"/>
+                    <color key="backgroundColor" red="0.91182845830917358" green="0.17691898345947266" blue="0.37174397706985474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="eBV-hH-Vjw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5pb-kP-SHv" firstAttribute="leading" secondItem="RlR-g8-wgt" secondAttribute="trailing" id="2k3-uF-EeQ"/>
+                <constraint firstAttribute="trailing" secondItem="zlG-ia-iac" secondAttribute="trailing" id="HTu-zb-ZRi"/>
+                <constraint firstItem="7jQ-h9-x6m" firstAttribute="top" secondItem="RlR-g8-wgt" secondAttribute="bottom" id="KcN-Ds-WpI"/>
+                <constraint firstAttribute="trailing" secondItem="5pb-kP-SHv" secondAttribute="trailing" constant="10" id="MMz-De-JUX"/>
+                <constraint firstItem="zlG-ia-iac" firstAttribute="top" secondItem="leU-2a-SY7" secondAttribute="top" id="MRv-Cx-hfc"/>
+                <constraint firstItem="RlR-g8-wgt" firstAttribute="top" secondItem="zlG-ia-iac" secondAttribute="bottom" id="UOF-3t-zYj"/>
+                <constraint firstItem="7jQ-h9-x6m" firstAttribute="leading" secondItem="leU-2a-SY7" secondAttribute="leading" constant="44" id="bqZ-Bt-EPe"/>
+                <constraint firstItem="RlR-g8-wgt" firstAttribute="leading" secondItem="leU-2a-SY7" secondAttribute="leading" constant="44" id="icT-Uq-gPa"/>
+                <constraint firstItem="zlG-ia-iac" firstAttribute="leading" secondItem="leU-2a-SY7" secondAttribute="leading" constant="-2" id="mEN-aN-NNi"/>
+                <constraint firstAttribute="bottom" secondItem="7jQ-h9-x6m" secondAttribute="bottom" id="mFY-WV-Cuh"/>
+                <constraint firstItem="5pb-kP-SHv" firstAttribute="top" secondItem="zlG-ia-iac" secondAttribute="bottom" constant="10" id="rWm-FS-UJ6"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="423.4375" y="-232.32421874999997"/>
+        </view>
+        <view contentMode="scaleToFill" id="hDe-0D-CfG" userLabel="HTML View - Simponi">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="728"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simponi_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="je4-bi-FcV">
+                    <rect key="frame" x="20" y="16" width="149" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="149" id="JB9-NA-Ldz"/>
+                        <constraint firstAttribute="height" constant="69" id="nFx-Z7-NGx"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4Q-GI-ISs" customClass="IOMCustomFontButton">
+                    <rect key="frame" x="192" y="45" width="240" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="IMPORTANT SAFETY INFORMATION">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpToSimponiInfo:" destination="-1" eventType="touchUpInside" id="FbN-kC-bdb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-pp-Qhh" customClass="IOMCustomFontButton">
+                    <rect key="frame" x="440" y="45" width="254" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="FULL PRESCRIBING INFORMATION">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showSimponiPDF:" destination="-1" eventType="touchUpInside" id="qrd-mi-2Oa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDt-4C-0Nj">
+                    <rect key="frame" x="969" y="5" width="45" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="sisiArrow_large_close.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="hideSimponiHTMLView:" destination="-1" eventType="touchUpInside" id="Y71-Hp-bgP"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbn-hk-doU">
+                    <rect key="frame" x="0.0" y="85" width="1024" height="643"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rbn-hk-doU" firstAttribute="leading" secondItem="hDe-0D-CfG" secondAttribute="leading" id="6iV-H1-Nyt"/>
+                <constraint firstAttribute="bottom" secondItem="rbn-hk-doU" secondAttribute="bottom" id="FDu-jM-9Dn"/>
+                <constraint firstItem="rbn-hk-doU" firstAttribute="top" secondItem="je4-bi-FcV" secondAttribute="bottom" id="YuM-B7-pjN"/>
+                <constraint firstAttribute="trailing" secondItem="rbn-hk-doU" secondAttribute="trailing" id="dO5-h8-6ZR"/>
+                <constraint firstItem="je4-bi-FcV" firstAttribute="leading" secondItem="hDe-0D-CfG" secondAttribute="leading" constant="20" id="pIz-aC-Sqa"/>
+                <constraint firstItem="je4-bi-FcV" firstAttribute="top" secondItem="hDe-0D-CfG" secondAttribute="top" constant="16" id="ycs-0L-8nL"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="423.046875" y="506.25"/>
+        </view>
+        <view contentMode="scaleToFill" id="aLm-Zr-XTx" userLabel="Half View - Both">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8bj-Rm-nPv">
+                    <rect key="frame" x="20" y="0.0" width="984" height="257"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8cj-Q7-oR2">
+                            <rect key="frame" x="0.0" y="0.0" width="300.5" height="257"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndg-7H-CI9">
+                                    <rect key="frame" x="0.0" y="0.0" width="300.5" height="14"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="14" id="9LO-IT-dnX"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Za4-h5-8bB">
+                                    <rect key="frame" x="0.0" y="24" width="300.5" height="75"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1BH-1O-zxd">
+                                            <rect key="frame" x="0.0" y="0.0" width="145.5" height="75"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1D-G4-bKi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="31.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="tpu-cZ-yLt" customClass="IOMCustomFontButton">
+                                                            <rect key="frame" x="0.0" y="0.0" width="145.5" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal">
+                                                                <string key="title">IMPORTANT SAFETY 
+INFORMATION</string>
+                                                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="jumpToSimponiInfo:" destination="-1" eventType="touchUpInside" id="YMB-mm-fjc"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="tpu-cZ-yLt" firstAttribute="top" secondItem="K1D-G4-bKi" secondAttribute="top" id="76C-Yg-pYr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tpu-cZ-yLt" secondAttribute="bottom" id="JAX-Wj-QdP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="tpu-cZ-yLt" secondAttribute="trailing" id="jvI-tz-Nap"/>
+                                                        <constraint firstItem="tpu-cZ-yLt" firstAttribute="leading" secondItem="K1D-G4-bKi" secondAttribute="leading" id="rpN-zN-1fv"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QkL-1t-grw" customClass="IOMCustomFontButton">
+                                                    <rect key="frame" x="0.0" y="43.5" width="145.5" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal">
+                                                        <string key="title">FULL PRESCRIBING
+INFORMATION</string>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showSimponiPDF:" destination="-1" eventType="touchUpInside" id="HoQ-DN-B7W"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsX-32-4Eg">
+                                            <rect key="frame" x="155.5" y="0.0" width="145" height="75"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="simponiLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-GZ-ebs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="75"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUA-nE-li9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="75"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showSimponiHTMLView:" destination="-1" eventType="touchUpInside" id="13A-m0-zAc"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sisiArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="eS3-WD-BKF">
+                                                    <rect key="frame" x="123" y="0.0" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="J0y-Za-vYn"/>
+                                                        <constraint firstAttribute="height" constant="22" id="dtE-Yf-by9"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="JUA-nE-li9" firstAttribute="leading" secondItem="GsX-32-4Eg" secondAttribute="leading" id="3dn-VP-49I"/>
+                                                <constraint firstItem="yLf-GZ-ebs" firstAttribute="leading" secondItem="GsX-32-4Eg" secondAttribute="leading" id="4BR-R6-yVs"/>
+                                                <constraint firstItem="JUA-nE-li9" firstAttribute="top" secondItem="GsX-32-4Eg" secondAttribute="top" id="9Wi-p7-rIA"/>
+                                                <constraint firstItem="eS3-WD-BKF" firstAttribute="top" secondItem="GsX-32-4Eg" secondAttribute="top" id="BJf-VF-Nai"/>
+                                                <constraint firstAttribute="trailing" secondItem="eS3-WD-BKF" secondAttribute="trailing" id="GzL-XF-PCv"/>
+                                                <constraint firstAttribute="trailing" secondItem="JUA-nE-li9" secondAttribute="trailing" id="UMn-n8-CHE"/>
+                                                <constraint firstItem="yLf-GZ-ebs" firstAttribute="top" secondItem="GsX-32-4Eg" secondAttribute="top" id="b9d-Da-0IT"/>
+                                                <constraint firstAttribute="trailing" secondItem="yLf-GZ-ebs" secondAttribute="trailing" constant="14" id="euU-Et-wuq"/>
+                                                <constraint firstAttribute="bottom" secondItem="yLf-GZ-ebs" secondAttribute="bottom" id="jyP-Ji-G3k"/>
+                                                <constraint firstAttribute="bottom" secondItem="JUA-nE-li9" secondAttribute="bottom" id="l0v-YC-qR9"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="sFq-1x-HaD"/>
+                                    </constraints>
+                                </stackView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpn-1F-SZw">
+                                    <rect key="frame" x="0.0" y="109" width="300.5" height="148"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <string key="text">SELECTED IMPORTANT SAFETY INFORMATION
+
+Serious and sometimes fatal side effects have been reported with SIMPONI® ARIA® (golimumab), including infections due to tuberculosis, invasive fungal infections (eg, histoplasmosis), bacterial, viral, or other opportunistic pathogens. Prior to initiating SIMPONI® ARIA® and periodically during therapy, evaluate patients for active tuberculosis and test for latent infection. Lymphoma, including a rare and fatal cancer called hepatosplenic T-cell lymphoma, and other malignancies can occur in adults and children, and can be fatal. Other serious risks include melanoma and Merkel cell carcinoma, heart failure, demyelinating disorders, hypersensitivity reactions, and hepatitis B reactivation. Prior to initiating SIMPONI® ARIA®, test patients for hepatitis B viral infection. Please see related and other Important Safety Information on pages</string>
+                                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Wpn-1F-SZw" secondAttribute="trailing" id="8HS-jW-9E5"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2IP-Mp-6gW">
+                            <rect key="frame" x="320.5" y="0.0" width="1" height="257"/>
+                            <color key="backgroundColor" red="0.78424429893493652" green="0.78435814380645752" blue="0.78421944379806519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="J0q-S0-tfT"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zb5-OG-Otg">
+                            <rect key="frame" x="341.5" y="0.0" width="301" height="257"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3St-Zz-ceL">
+                                    <rect key="frame" x="0.0" y="0.0" width="301" height="14"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="14" id="eh5-nS-qmq"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-0K-KFQ">
+                                    <rect key="frame" x="0.0" y="24" width="301" height="75"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fnF-iK-jQP">
+                                            <rect key="frame" x="0.0" y="0.0" width="145.5" height="75"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trs-rJ-Bqq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="31.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QEF-pb-D0H" customClass="IOMCustomFontButton">
+                                                            <rect key="frame" x="0.0" y="0.0" width="145.5" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal">
+                                                                <string key="title">IMPORTANT SAFETY 
+INFORMATION</string>
+                                                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="jumpToStelaraInfo:" destination="-1" eventType="touchUpInside" id="Xw0-Yd-OhB"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="QEF-pb-D0H" secondAttribute="trailing" id="0Jh-W6-1kD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QEF-pb-D0H" secondAttribute="bottom" id="FvO-KO-Neg"/>
+                                                        <constraint firstItem="QEF-pb-D0H" firstAttribute="leading" secondItem="Trs-rJ-Bqq" secondAttribute="leading" id="i8k-bC-daC"/>
+                                                        <constraint firstItem="QEF-pb-D0H" firstAttribute="top" secondItem="Trs-rJ-Bqq" secondAttribute="top" id="nbW-x3-990"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zLO-aP-9LL" customClass="IOMCustomFontButton">
+                                                    <rect key="frame" x="0.0" y="43.5" width="145.5" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal">
+                                                        <string key="title">FULL PRESCRIBING
+INFORMATION</string>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showStelaraPDF:" destination="-1" eventType="touchUpInside" id="7hf-n4-mYO"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-qE-m7p">
+                                            <rect key="frame" x="155.5" y="0.0" width="145.5" height="75"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stelaraLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jLX-qH-yfo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95.5" height="55"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dz-wh-ODP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="75"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showStelaraHTMLView:" destination="-1" eventType="touchUpInside" id="FKR-R6-pho"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sisiArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="dBP-VJ-iDu">
+                                                    <rect key="frame" x="123.5" y="0.0" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="SWB-I8-DxY"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="dfM-zx-MTX"/>
+                                                        <constraint firstAttribute="width" constant="22" id="mVJ-cg-deK"/>
+                                                        <constraint firstAttribute="height" constant="22" id="tW0-5J-s7K"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="1Dz-wh-ODP" firstAttribute="leading" secondItem="ch3-qE-m7p" secondAttribute="leading" id="5Kk-Ay-FDt"/>
+                                                <constraint firstAttribute="trailing" secondItem="dBP-VJ-iDu" secondAttribute="trailing" id="C02-00-a7o"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Dz-wh-ODP" secondAttribute="trailing" id="DJD-to-tbG"/>
+                                                <constraint firstAttribute="bottom" secondItem="jLX-qH-yfo" secondAttribute="bottom" constant="20" id="DQk-go-9fo"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Dz-wh-ODP" secondAttribute="bottom" id="HzH-A1-raQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="jLX-qH-yfo" secondAttribute="trailing" constant="50" id="MsD-ac-42d"/>
+                                                <constraint firstItem="1Dz-wh-ODP" firstAttribute="top" secondItem="ch3-qE-m7p" secondAttribute="top" id="W4Y-mx-9LL"/>
+                                                <constraint firstItem="jLX-qH-yfo" firstAttribute="top" secondItem="ch3-qE-m7p" secondAttribute="top" id="dy1-D3-tqL"/>
+                                                <constraint firstItem="dBP-VJ-iDu" firstAttribute="top" secondItem="ch3-qE-m7p" secondAttribute="top" id="kyf-uS-auY"/>
+                                                <constraint firstItem="jLX-qH-yfo" firstAttribute="leading" secondItem="ch3-qE-m7p" secondAttribute="leading" id="wPE-GQ-reH"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="653-3j-rPp"/>
+                                    </constraints>
+                                </stackView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoH-fS-KT7">
+                                    <rect key="frame" x="0.0" y="109" width="301" height="148"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <string key="text">SELECTED IMPORTANT SAFETY INFORMATION
+
+Serious and sometimes fatal side effects have been reported with REMICADE® (infliximab). Infections due to bacterial, mycobacterial, invasive fungal, viral, or other opportunistic pathogens (e.g., TB, histoplasmosis) have been reported. Lymphoma, including cases of fatal hepatosplenic T-cell lymphoma (HSTCL), and other malignancies have been reported, including in children and young adult patients. Due to the risk of HSTCL, mostly reported in Crohn’s disease and ulcerative colitis, assess the risk/benefit, especially if the patient is male and is receiving azathioprine or 6-mercaptopurine treatment. REMICADE® is contraindicated in patients with severe hypersensitivity reactions to REMICADE® and certain patients with congestive heart failure. Other serious side effects reported include melanoma and Merkel cell carcinoma, hepatitis B reactivation, hepatotoxicity, hematological events, hypersensitivity, neurological events, and lupus-like syndrome. Please see related and other Important Safety Information on pages</string>
+                                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="UoH-fS-KT7" secondAttribute="bottom" id="a4C-nV-NM8"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ka1-lF-jfy">
+                            <rect key="frame" x="662.5" y="0.0" width="1" height="257"/>
+                            <color key="backgroundColor" red="0.78431372549019607" green="0.78431372549019607" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="GjR-3c-0Ta"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6HQ-fQ-DVP">
+                            <rect key="frame" x="683.5" y="0.0" width="300.5" height="257"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-k7-0t1">
+                                    <rect key="frame" x="0.0" y="0.0" width="300.5" height="14"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="14" id="3zW-Lt-ctE"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="T2a-mE-8wt">
+                                    <rect key="frame" x="0.0" y="24" width="300.5" height="75"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gYT-H4-hxw">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="75"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PbE-DD-ymt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="31.5"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4n4-bj-59n" customClass="IOMCustomFontButton">
+                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <state key="normal">
+                                                                <string key="title">IMPORTANT SAFETY 
+INFORMATION</string>
+                                                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="jumpToRemicadeInfo:" destination="-1" eventType="touchUpInside" id="68q-dg-idd"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="4n4-bj-59n" firstAttribute="top" secondItem="PbE-DD-ymt" secondAttribute="top" id="9v2-ab-RgZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4n4-bj-59n" secondAttribute="trailing" id="AVr-gR-WSp"/>
+                                                        <constraint firstItem="4n4-bj-59n" firstAttribute="leading" secondItem="PbE-DD-ymt" secondAttribute="leading" id="F22-2Z-D7H"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4n4-bj-59n" secondAttribute="bottom" id="VeA-B7-pRv"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="vSJ-ON-Emq" customClass="IOMCustomFontButton">
+                                                    <rect key="frame" x="0.0" y="43.5" width="145" height="31.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal">
+                                                        <string key="title">FULL PRESCRIBING
+INFORMATION</string>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showRemicadePDF:" destination="-1" eventType="touchUpInside" id="bNt-7B-tYG"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXQ-An-S5z">
+                                            <rect key="frame" x="155" y="0.0" width="145.5" height="75"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remicadeLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-WQ-ajl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="75"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQy-Bg-aEc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="75"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="showRemicadeHTMLView:" destination="-1" eventType="touchUpInside" id="fnh-NX-BJJ"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sisiArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-hv-T6E">
+                                                    <rect key="frame" x="123.5" y="0.0" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="Ohu-tj-HCT"/>
+                                                        <constraint firstAttribute="width" constant="22" id="X6s-h9-yLX"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="JQy-Bg-aEc" secondAttribute="bottom" id="34Q-Nb-fpD"/>
+                                                <constraint firstItem="nXG-WQ-ajl" firstAttribute="leading" secondItem="HXQ-An-S5z" secondAttribute="leading" id="DoP-tQ-Nmz"/>
+                                                <constraint firstAttribute="trailing" secondItem="JQy-Bg-aEc" secondAttribute="trailing" id="ErK-vX-m2M"/>
+                                                <constraint firstItem="JQy-Bg-aEc" firstAttribute="leading" secondItem="HXQ-An-S5z" secondAttribute="leading" id="FqA-Vg-KeD"/>
+                                                <constraint firstItem="hb3-hv-T6E" firstAttribute="top" secondItem="HXQ-An-S5z" secondAttribute="top" id="R4Q-IB-I1z"/>
+                                                <constraint firstAttribute="trailing" secondItem="hb3-hv-T6E" secondAttribute="trailing" id="Tc9-uN-0JK"/>
+                                                <constraint firstItem="JQy-Bg-aEc" firstAttribute="top" secondItem="HXQ-An-S5z" secondAttribute="top" id="Xll-Ey-NQh"/>
+                                                <constraint firstAttribute="bottom" secondItem="nXG-WQ-ajl" secondAttribute="bottom" id="cai-Hz-thF"/>
+                                                <constraint firstAttribute="trailing" secondItem="nXG-WQ-ajl" secondAttribute="trailing" constant="25.5" id="dHY-wM-IAh"/>
+                                                <constraint firstItem="nXG-WQ-ajl" firstAttribute="top" secondItem="HXQ-An-S5z" secondAttribute="top" id="qe1-N7-jl6"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="JYS-50-AEi"/>
+                                    </constraints>
+                                </stackView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJM-18-60k">
+                                    <rect key="frame" x="0.0" y="109" width="300.5" height="148"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <string key="text">SELECTED IMPORTANT SAFETY INFORMATION
+
+Serious and sometimes fatal side effects have been reported with REMICADE® (infliximab). Infections due to bacterial, mycobacterial, invasive fungal, viral, or other opportunistic pathogens (e.g., TB, histoplasmosis) have been reported. Lymphoma, including cases of fatal hepatosplenic T-cell lymphoma (HSTCL), and other malignancies have been reported, including in children and young adult patients. Due to the risk of HSTCL, mostly reported in Crohn’s disease and ulcerative colitis, assess the risk/benefit, especially if the patient is male and is receiving azathioprine or 6-mercaptopurine treatment. REMICADE® is contraindicated in patients with severe hypersensitivity reactions to REMICADE® and certain patients with congestive heart failure. Other serious side effects reported include melanoma and Merkel cell carcinoma, hepatitis B reactivation, hepatotoxicity, hematological events, hypersensitivity, neurological events, and lupus-like syndrome. Please see related and other Important Safety Information on pages</string>
+                                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="EJM-18-60k" secondAttribute="bottom" id="Pgz-Fn-vAe"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="8cj-Q7-oR2" firstAttribute="width" secondItem="Zb5-OG-Otg" secondAttribute="width" id="OKX-R7-9Ki"/>
+                        <constraint firstItem="8cj-Q7-oR2" firstAttribute="width" secondItem="6HQ-fQ-DVP" secondAttribute="width" id="Qiy-xI-GOT"/>
+                        <constraint firstItem="6HQ-fQ-DVP" firstAttribute="width" secondItem="Zb5-OG-Otg" secondAttribute="width" id="oEB-ha-WiT"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.93222731351852417" green="0.95702797174453735" blue="0.96958440542221069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8bj-Rm-nPv" secondAttribute="bottom" id="AZl-eQ-7NF"/>
+                <constraint firstItem="8bj-Rm-nPv" firstAttribute="leading" secondItem="aLm-Zr-XTx" secondAttribute="leading" constant="20" id="MfB-Ow-EKq"/>
+                <constraint firstItem="8bj-Rm-nPv" firstAttribute="top" secondItem="aLm-Zr-XTx" secondAttribute="top" id="loB-io-X77"/>
+                <constraint firstAttribute="trailing" secondItem="8bj-Rm-nPv" secondAttribute="trailing" constant="20" id="sdo-Qq-I1D"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="423.4375" y="-422.75390625"/>
+        </view>
+        <view contentMode="scaleToFill" id="wjn-FC-lJh" userLabel="HTML View - Simponi">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="728"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stelaraLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-oM-tn1">
+                    <rect key="frame" x="20" y="16" width="149" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="69" id="KLF-EN-BM8"/>
+                        <constraint firstAttribute="width" constant="149" id="qfS-Jb-6NM"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Eo-OB-SRB" customClass="IOMCustomFontButton">
+                    <rect key="frame" x="192" y="45" width="240" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="IMPORTANT SAFETY INFORMATION">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="jumpToStelaraInfo:" destination="-1" eventType="touchUpInside" id="6GY-u6-bao"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-Ha-52j" customClass="IOMCustomFontButton">
+                    <rect key="frame" x="440" y="45" width="254" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="FULL PRESCRIBING INFORMATION">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showStelaraPDF:" destination="-1" eventType="touchUpInside" id="GoU-3g-fwS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-K4-hlX">
+                    <rect key="frame" x="969" y="5" width="45" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="sisiArrow_large_close.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="hideStelaraHTMLView:" destination="-1" eventType="touchUpInside" id="WrF-Gp-P8n"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAS-Oc-E0d">
+                    <rect key="frame" x="0.0" y="93" width="1024" height="635"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GAS-Oc-E0d" firstAttribute="leading" secondItem="wjn-FC-lJh" secondAttribute="leading" id="AOQ-mP-OpI"/>
+                <constraint firstAttribute="trailing" secondItem="GAS-Oc-E0d" secondAttribute="trailing" id="Dan-vB-rPz"/>
+                <constraint firstAttribute="bottom" secondItem="GAS-Oc-E0d" secondAttribute="bottom" id="Dir-tp-jah"/>
+                <constraint firstItem="4fm-oM-tn1" firstAttribute="top" secondItem="wjn-FC-lJh" secondAttribute="top" constant="16" id="FHk-zY-2gc"/>
+                <constraint firstItem="GAS-Oc-E0d" firstAttribute="top" secondItem="4fm-oM-tn1" secondAttribute="bottom" constant="8" symbolic="YES" id="Qdj-GE-R5I"/>
+                <constraint firstItem="4fm-oM-tn1" firstAttribute="leading" secondItem="wjn-FC-lJh" secondAttribute="leading" constant="20" symbolic="YES" id="ykY-4V-bmQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="416" y="1134"/>
+        </view>
+        <view contentMode="scaleToFill" id="a4H-j5-MmU" userLabel="Full View - Stelara">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="255"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="I6W-CF-Thp">
+                    <rect key="frame" x="44" y="187" width="641" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stelaraLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-QD-vqq">
+                            <rect key="frame" x="0.0" y="0.0" width="149" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="0jQ-Hb-f6p"/>
+                                <constraint firstAttribute="width" constant="149" id="20U-tU-oNr"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-bD-MrW" customClass="IOMCustomFontButton">
+                            <rect key="frame" x="179" y="16" width="220" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="IMPORTANT SAFETY INFORMATION">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="jumpToStelaraInfo:" destination="-1" eventType="touchUpInside" id="Qar-Qt-8gK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8F6-oQ-KGg" customClass="IOMCustomFontButton">
+                            <rect key="frame" x="429" y="16" width="212" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="FULL PRESCRIBING INFORMATION">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="showSimponiPDF:" destination="-1" eventType="touchUpInside" id="STr-Aa-zqx"/>
+                                <action selector="showStelaraPDF:" destination="-1" eventType="touchUpInside" id="64Q-ai-TY9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-Wu-DOB">
+                    <rect key="frame" x="970" y="20" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="7M8-hz-26x"/>
+                        <constraint firstAttribute="height" constant="44" id="e3T-Ol-rCP"/>
+                    </constraints>
+                    <state key="normal" image="sisiArrow_large.png">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="showStelaraHTMLView:" destination="-1" eventType="touchUpInside" id="fxE-Zg-E9E"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3S-HF-QnS">
+                    <rect key="frame" x="44" y="10" width="926" height="177"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <string key="text">SELECTED IMPORTANT SAFETY INFORMATION
+
+Serious and sometimes fatal side effects have been reported with SIMPONI ARIA® (golimumab), including infections due to tuberculosis, invasive fungal infections (eg, histoplasmosis), bacterial, viral, or other opportunistic pathogens. Prior to initiating SIMPONI ARIA® and periodically during therapy, evaluate patients for active tuberculosis and test for latent infection. Lymphoma, including a rare and fatal cancer called hepatosplenic T-cell lymphoma, and other malignancies can occur in adults and children, and can be fatal. Other serious risks include melanoma and Merkel cell carcinoma, heart failure, demyelinating disorders, hypersensitivity reactions, and hepatitis B reactivation. Prior to initiating SIMPONI ARIA®, test patients for hepatitis B viral infection. Please see related and other Important Safety Information on pages</string>
+                    <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5L7-Le-u6H">
+                    <rect key="frame" x="-2" y="0.0" width="1026" height="10"/>
+                    <color key="backgroundColor" red="0.32580000162124634" green="0.18414241075515747" blue="0.53504842519760132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="gwv-Oi-foE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5L7-Le-u6H" secondAttribute="trailing" id="1hs-pg-dIv"/>
+                <constraint firstItem="5L7-Le-u6H" firstAttribute="top" secondItem="a4H-j5-MmU" secondAttribute="top" id="7BY-2x-5Ug"/>
+                <constraint firstItem="I6W-CF-Thp" firstAttribute="leading" secondItem="a4H-j5-MmU" secondAttribute="leading" constant="44" id="Ay2-O5-Es0"/>
+                <constraint firstItem="z3S-HF-QnS" firstAttribute="top" secondItem="5L7-Le-u6H" secondAttribute="bottom" id="FUm-pH-tTv"/>
+                <constraint firstItem="I6W-CF-Thp" firstAttribute="top" secondItem="z3S-HF-QnS" secondAttribute="bottom" id="HEo-HZ-0ZP"/>
+                <constraint firstItem="sdd-Wu-DOB" firstAttribute="leading" secondItem="z3S-HF-QnS" secondAttribute="trailing" id="V9O-vd-xRg"/>
+                <constraint firstAttribute="bottom" secondItem="I6W-CF-Thp" secondAttribute="bottom" constant="8" id="fBQ-Kx-tTd"/>
+                <constraint firstItem="sdd-Wu-DOB" firstAttribute="top" secondItem="5L7-Le-u6H" secondAttribute="bottom" constant="10" id="gaZ-da-CUm"/>
+                <constraint firstAttribute="trailing" secondItem="sdd-Wu-DOB" secondAttribute="trailing" constant="10" id="jOA-gI-Esr"/>
+                <constraint firstItem="z3S-HF-QnS" firstAttribute="leading" secondItem="a4H-j5-MmU" secondAttribute="leading" constant="44" id="q01-2f-FNg"/>
+                <constraint firstItem="5L7-Le-u6H" firstAttribute="leading" secondItem="a4H-j5-MmU" secondAttribute="leading" constant="-2" id="xdH-bc-RkP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="453.90625" y="1340.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="remicadeLogo.png" width="105" height="23"/>
+        <image name="remicade_large.png" width="147" height="32"/>
+        <image name="simponiLogo.png" width="298" height="138"/>
+        <image name="simponi_large.png" width="298" height="138"/>
+        <image name="sisiArrow.png" width="18" height="18"/>
+        <image name="sisiArrow_large.png" width="25" height="25"/>
+        <image name="sisiArrow_large_close.png" width="25" height="25"/>
+        <image name="stelaraLogo" width="266" height="127"/>
+    </resources>
+</document>

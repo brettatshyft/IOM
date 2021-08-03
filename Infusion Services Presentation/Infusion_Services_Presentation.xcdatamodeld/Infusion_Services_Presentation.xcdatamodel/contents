@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PayerMix" representedClassName="PayerMix" syncable="YES">
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="payer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="percentOfRemicade" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="spp" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="payerMixes" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="Penetration" representedClassName="Penetration" syncable="YES">
+        <attribute name="totalDiseaseStatePatientPopulation" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="penetration" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="Presentation" representedClassName="Presentation" syncable="YES">
+        <attribute name="accountName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 64" minValueString="0" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="presentationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="payerMixes" optional="YES" toMany="YES" maxCount="5" deletionRule="Cascade" destinationEntity="PayerMix" inverseName="presentation" inverseEntity="PayerMix" syncable="YES"/>
+        <relationship name="penetration" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Penetration" inverseName="presentation" inverseEntity="Penetration" syncable="YES"/>
+        <relationship name="reimbursement" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Reimbursement" inverseName="presentation" inverseEntity="Reimbursement" syncable="YES"/>
+        <relationship name="utilization" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Utilization" inverseName="presentation" inverseEntity="Utilization" syncable="YES"/>
+        <relationship name="vialTrend" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="VialTrend" inverseName="presentation" inverseEntity="VialTrend" syncable="YES"/>
+    </entity>
+    <entity name="Reimbursement" representedClassName="Reimbursement" syncable="YES">
+        <attribute name="geographicArea" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reimbursementFor96413" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="reimbursementFor96415" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="reimbursement" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="Utilization" representedClassName="Utilization" syncable="YES">
+        <attribute name="otherIVBiologics" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="remicadePatients" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="subcutaneousPatients" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="utilization" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <entity name="VialTrend" representedClassName="VialTrend" syncable="YES">
+        <attribute name="lastDataMonth" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="valueEightMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueElevenMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueFiveMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueFourMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueLastDataMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueNineMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueOneMonthBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueSevenMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueSixMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueTenMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueThreeMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="valueTwoMonthsBefore" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="presentation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Presentation" inverseName="vialTrend" inverseEntity="Presentation" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="PayerMix" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Penetration" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Presentation" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="Reimbursement" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Utilization" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="VialTrend" positionX="160" positionY="192" width="128" height="255"/>
+    </elements>
+</model>

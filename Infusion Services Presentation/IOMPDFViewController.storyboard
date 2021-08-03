@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="aWb-db-mtz">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PDFViewController-->
+        <scene sceneID="Ndp-cK-Edn">
+            <objects>
+                <viewController title="SimponiPDF" id="aWb-db-mtz" userLabel="PDFViewController" customClass="IOMPDFViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IOp-00-j0e"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rhz-rM-i6s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BaN-cy-bef">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ek-5h-M8E">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem image="Arrow_06-1.png" id="lgn-0m-li5">
+                                        <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="backArrowSelected:" destination="aWb-db-mtz" id="RkF-tT-QXp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Back" id="DQK-Hd-5nh">
+                                        <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="backSelected:" destination="aWb-db-mtz" id="nFz-K5-KWo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WL0-SL-IfD"/>
+                                    <barButtonItem title="FULL PRESCRIBING INFORMATION" id="Jvy-hj-O3g">
+                                        <color key="tintColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="irg-Qd-jke"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="TitleBarButtonItem" destination="Jvy-hj-O3g" id="c5B-78-YbI"/>
+                        <outlet property="toolbar" destination="5Ek-5h-M8E" id="RO6-ZC-Bpl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1Z-oi-I4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.96875" y="86.71875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow_06-1.png" width="11.5" height="20.5"/>
+    </resources>
+</document>

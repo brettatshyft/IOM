@@ -1,0 +1,233 @@
+/*
+@media (min-width: 900px) { 
+        body { font-size:20px; } 
+} 
+@media (max-width: 899px) { 
+        body { font-size:18px; } 
+}
+@media (max-width: 400px) { 
+        body { font-size:16px; } 
+}
+*/
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('fonts/karbon-regular-webfont.eot');
+    src: url('fonts/karbon-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/karbon-regular-webfont.woff') format('woff'),
+         url('fonts/karbon-regular-webfont.ttf') format('truetype'),
+         url('fonts/karbon-regular-webfont.svg#karbonregular') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Karbon';
+    src: url('fonts/karbon-medium-webfont.eot');
+    src: url('fonts/karbon-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/karbon-medium-webfont.woff') format('woff'),
+         url('fonts/karbon-medium-webfont.ttf') format('truetype'),
+         url('fonts/karbon-medium-webfont.svg#karbonmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Karbon';
+    src: url('fonts/karbon-bold-webfont.eot');
+    src: url('fonts/karbon-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/karbon-bold-webfont.woff') format('woff'),
+         url('fonts/karbon-bold-webfont.ttf') format('truetype'),
+         url('fonts/karbon-bold-webfont.svg#karbonbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+body {
+	margin:0;
+	font-family:'Karbon', Arial, Helvetica, sans-serif; 
+	font-size: 20px;
+	background-color: #eef4f7;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.area {
+    fill: #85c32f;
+    stroke-width: 0;
+	opacity: 0.5;
+}
+
+#pieChart .slice text {
+	font-size: 1.1em;
+	font-family: Arial;
+}
+
+#pieChart .slice path {
+	stroke: #eef3f7;
+	stroke-width:5px;
+}
+
+#lineGraph {
+	fill:#005c82;
+}
+
+#lineGraph .axis path,
+#lineGraph .axis line {
+	stroke: #acb0b4;
+}
+
+#lineGraph .y.axis path {
+	display: none;
+}
+
+#lineGraph .x.axis text {
+	text-anchor:start !important;
+}
+
+#lineGraph .x.axis text.axis_header, #lineGraph .y.axis text.axis_header {
+	text-anchor:middle !important;	
+	font-size: 1.2em;
+}
+
+#lineGraph .line {
+	fill: none;
+	stroke: #ed1556;
+	stroke-width: 2px;
+}
+#lineGraph .line.stelara {
+	stroke: #5d2e81;
+}
+#lineGraph .line.remicade, #lineGraph .line.availableCapacity {
+	stroke: #20a0dc;
+}
+#lineGraph .line.currentInfusions {
+	stroke: #dfad48;
+}
+#lineGraph .overlay {
+	fill: none;
+	pointer-events: all;
+}
+
+#lineGraph .focus circle {
+	fill: none;
+	stroke: steelblue;
+}
+
+#lineGraph .axis path,
+#lineGraph .axis line {
+	stroke-width: 1;
+}
+
+#barGraph {
+	fill:#4e5054;
+	font-size: 0.8em;
+}
+
+#barGraph.large {
+	font-size: 1.4em;
+}
+
+#barGraph .bar {
+	fill: steelblue;
+}
+
+#barGraph .x.axis path, #barGraph .y.axis path{
+	display: none;
+}
+
+#barGraph .x.axis text.axis_header {
+	text-anchor:start !important;	
+}
+
+#barGraph .y.axis text.axis_header {
+	text-anchor:middle !important;	
+}
+
+#barGraph .x.axis text.axis_header {
+	font-size: 1.2em;	
+}
+
+#barGraph text.columnText {
+	font-size: 1.2em;
+	fill:#4E5054;	
+}
+
+#gantChart {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	fill: #005C82;
+	background-color: #EEF4F7;
+}
+#gantChart .axis path,#gantChart .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+#gantChart .x.axis path, #gantChart .y.axis path{
+	display: none;
+}
+
+#gantChart .x.axis text, #gantChart .y.axis text {
+	text-anchor:start !important;
+}
+
+#gantChart .x.axis text {
+	font-size: 0.9em;	
+}
+
+#gantChart text.axis_header {
+	text-anchor:middle;	
+	font-size: 1.2em;
+}
+
+#gantChart .y.axis text {
+	fill:#4E5054;
+}
+
+#gantChart .bar {
+	fill: #33b5e5;
+}
+ 
+#gantChart .bar-simponi {
+	fill: #00a0df;
+}
+ 
+#gantChart .bar-remicade {
+	fill: #e1ad40;
+}
+
+#gantChart .bar-subcutaneous {
+	fill: #85bb3d;
+}
+ 
+#gantChart .bar-additionalrem {
+	fill: #df5400;
+}
+
+#gantChart .bar-additionalsimp {
+	fill: #ee82ee;
+}
+#gantChart .bar-prepost {
+	fill: #b7b7b7;
+}
+
+#gantChart .bar-other {
+	fill: #a300df;
+}
+
+#gantChart .spacer {
+	height: 24px;
+	width:100%;
+	background-color:#fff;
+}

@@ -1,0 +1,16 @@
+//
+//  ScenarioOverviewViewController.h
+//  Infusion Services Presentation
+//
+//  Created by Patrick Pierson on 1/27/14.
+//  Copyright (c) 2014 Local Wisdom Inc. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@class Presentation;
+@interface ScenarioOverviewViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) Presentation* presentation;
+
+@end

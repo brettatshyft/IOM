@@ -1,0 +1,812 @@
+{
+  "Slides": [
+    {
+      "imageName": "Infusion_0000_Infusion-Landscape-Overview.png",
+      "chapterTitle": "Infusion Practice Considerations",
+      "overlayIDs": [
+        "accountNameSlide",
+        "presentationNameSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0001_Discussion-Topics.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0003_Medical-vs-Pharmacy.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0004_Coverage.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    
+    {
+      "imageName": "Infusion_0003A_Indication.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+          "RA IOI",
+          "HOPD",
+          "MIXED IOI",
+          "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "SIMPONI"
+    },
+    
+    {
+      "imageName": "Infusion_0005_Dosing.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+          "RA IOI",
+          "HOPD",
+          "MIXED IOI",
+          "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "SIMPONI"
+    },
+    {
+      "imageName": "Infusion_0005A_patient_support.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+          "RA IOI",
+          "HOPD",
+          "MIXED IOI",
+          "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "SIMPONI"
+    },
+    {
+      "imageName": "Infusion_0005B_dosing_CD_UC.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+          "GI IOI",
+          "HOPD",
+          "MIXED IOI",
+          "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "STELARA"
+    },
+    {
+      "imageName": "Infusion_0005C_patient_support_stelara.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+          "GI IOI",
+          "HOPD",
+          "MIXED IOI",
+          "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "STELARA"
+    },
+    {
+      "imageName": "Infusion_0005D_remicade_summary.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "REMICADE"
+    },
+    {
+      "imageName": "Infusion_0013_Biologic-Overview.png",
+      "chapterTitle": "Biologic Overview",
+      "overlayIDs": [
+        "accountNameSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0014_Information.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0015_Discussion-Topics-More.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0016_Biological-Overview-Patient-Population.png",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "patientPopulationSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "Infusion_0017_Biological-Overview-Account-Sub-&-IV-Utilization.png",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "biologicalOverviewAccount"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0018_Biological-Overview-Patient-Utilization",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "accountPatientUtilizationSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "Infusion_0019_Vital-Trends",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "vialTrendsSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "Infusion_0022_Payer-Mix",
+               "chapterTitle": "",
+               "overlayIDs": [
+                              "payerMixSlide"
+                              ],
+               "presentationTypes": [],
+               "presentationSections": "Infusion Services (only)",
+               "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0023_Reimbusment",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+                                     "RA IOI",
+                                     "HOPD",
+                                     "MIXED IOI",
+                                     "OTHER"
+      ],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "Infusion_0024_Drug-Admin-Codes.png",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "drugAdministrationSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "Infusion_0025_Infusion-Efficiency",
+      "chapterTitle": "Infusion Efficiency",
+      "overlayIDs": [
+        "accountNameSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0026_Variables",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0027_Resource-Utilization",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "resourceUtilizationSlide"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0030_Disclosure",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0032_Stelara-Dosing",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "STELARA"
+    },
+    {
+      "imageName": "Infusion_0033_Remicade",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "REMICADE"
+    },
+    {
+      "imageName": "",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "infusionOptimizationScenarios"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "",
+      "chapterTitle": "",
+      "overlayIDs": [
+        "infusionOptimizationInputSummary"
+      ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0035_Support-for-your-Practice",
+      "chapterTitle": "",
+      "overlayIDs": [
+                     "iomLogoTryptich"
+                     ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "BOTH"
+    },
+    {
+      "imageName": "Infusion_0039_Summary",
+      "chapterTitle": "Summary",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Optimization (only)",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0040_ISI-Simponi.png",
+      "chapterTitle": "Important Safety Information for SIMPONI ARIA®",
+      "overlayIDs": [
+                              "accountNameSlide"
+                              ],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0042_ISI-Simponi-Serious-Infections.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0043_ISI-Simponi-Serious-Infections-(Cont'd).png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0044_ISI-Simponi-Malignancies.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0045_ISI-Simponi-Malignancies-(Cont'd).png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0046_ISI-Simponi-Hepatitis-B-Reactivation.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0047_ISI-Simponi-Heart-Failure.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0048_ISI-Simponi-Demyelinating-Disorders.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0049_ISI-Simponi-Autoimmunity.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0050_ISI-Simponi-Use-With-Other-Drugs.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0051_ISI-Simponi-Hematologic-Cytopenia.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0052_ISI-Simponi-Vaccinations.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0053_ISI-Simponi-Hypersensitivity-Reactions.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0054_ISI-Simponi-Adverse-Reactions.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "RA IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE",
+             "links": [
+                       {
+                       "CGRect": "{{219,330},{250,25}}",
+                       "resource": "simponi_full_pi",
+                       "title": "FULL PRESCRIBING INFORMATION"
+                       },
+                       {
+                       "CGRect": "{{470,330},{250,25}}",
+                       "resource": "simponi_medication_guide",
+                       "title": "MEDICATION GUIDE"
+                       }
+                       ]
+    },
+    {
+      "imageName": "Infusion_0078_ISI-Stelara",
+      "chapterTitle": "Important Safety Information for STELARA®",
+      "overlayIDs": [
+                              "accountNameSlide"
+                              ],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0080_ISI-Stelara-Serious-Infections.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+     {
+     "imageName": "Infusion_0080a_ISI-Stelara-Theoretical-Risk",
+     "chapterTitle": "",
+     "overlayIDs": [],
+     "presentationTypes": [
+                           "GI IOI",
+                           "HOPD",
+                           "MIXED IOI",
+                           "OTHER"
+                           ],
+     "presentationSections": "Infusion Services & Infusion Optimization",
+     "SISI": "NONE"
+     },
+    {
+      "imageName": "Infusion_0081_ISI-Stelara-Serious-Infections-Continued.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0082_ISI-Stelara-Malignancies.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0083_ISI-Stelara-Hypersensitivity.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0084_ISI-Stelara-Reversible.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0085_ISI-Immunizations.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0086_ISI-Concomitant.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+    "imageName": "Infusion_0086a_STELARA-ISI-Noninfectious-Pneumonia",
+    "chapterTitle": "",
+    "overlayIDs": [],
+    "presentationTypes": [
+                       "GI IOI",
+                       "HOPD",
+                       "MIXED IOI",
+                       "OTHER"
+                       ],
+    "presentationSections": "Infusion Services & Infusion Optimization",
+    "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0087_ISI-Allergen.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0088_ISI-Most-Common-Adverse.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [        
+        "GI IOI",
+        "HOPD",
+        "MIXED IOI",
+        "OTHER"
+      ],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+             "SISI": "NONE",
+             "links": [
+                       {
+                       "CGRect": "{{150,475},{250,25}}",
+                       "resource": "stelara_full_pi",
+                       "title": "FULL PRESCRIBING INFORMATION"
+                       },
+                       {
+                       "CGRect": "{{400,475},{250,25}}",
+                       "resource": "stelara_medication_guide",
+                       "title": "MEDICATION GUIDE"
+                       }
+                       ]
+    },
+    {
+      "imageName": "Infusion_0120_ISI-Remicade",
+      "chapterTitle": "Important Safety Information for REMICADE®",
+      "overlayIDs": [
+                              "accountNameSlide"
+                              ],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0122_ISI-Remicade-Serious-Infections.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0123_ISI-Remicade-Serious-Infections-(Continued).png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0124_ISI-Remicade-Malignacies-1.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0125_ISI-Remicade-Malignacies-2.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0126_ISI-Remocade-Contraindications.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0127_ISI-Remicade-Hepatitis-B-Reactivation.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0128_ISI-Remicade-Hepatotoxicity.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0128A_heart_failure_remicade.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0129_ISI-Remicade-Hematologic-Events.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0130_ISI-Remicade-Hypersensitivity.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+     {
+     "imageName": "Infusion_0130a_ISI-Cardiovascular-and-Cerebrovascular",
+     "chapterTitle": "",
+     "overlayIDs": [],
+     "presentationTypes": [],
+     "presentationSections": "Infusion Services & Infusion Optimization",
+     "SISI": "NONE"
+     },
+    {
+      "imageName": "Infusion_0131_ISI-Remicade-Neurologic-Events.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0131A_concurrent-admin.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0132_ISI-Remicade-Autoimmunity.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0132A_vaccinations.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+    {
+      "imageName": "Infusion_0133_ISI-Remicade-Adverse-Reactions.png",
+      "chapterTitle": "",
+      "overlayIDs": [],
+      "presentationTypes": [],
+      "presentationSections": "Infusion Services & Infusion Optimization",
+      "SISI": "NONE"
+    },
+  ]
+}

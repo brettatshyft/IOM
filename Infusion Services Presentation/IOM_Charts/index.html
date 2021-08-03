@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>IOM Ipad App Graphs and Charts</title>
+    <link type='text/css' rel='stylesheet' href='stylesheet.css' />
+<style>
+#gantChart .bar-simponi {
+	fill: url(#texture_simponi) #ea3765;
+}
+ 
+#gantChart .bar-remicade {
+	fill: url(#texture_remicade) #e1ad40;
+}
+
+#gantChart .bar-stelara {
+    fill: url(#texture_stelara) #e1ad40;
+}
+
+#gantChart .bar-additionalstel {
+    fill: url(#texture_additionalstel) #672ca1;
+}
+
+#gantChart .bar-subcutaneous {
+	fill: url(#texture_subcutaneous) #f6c73b;
+}
+
+#gantChart .bar-additionalrem {
+	fill: url(#texture_additionalrem) #2e6e99;
+}
+
+#gantChart .bar-additionalsimp {
+	fill: url(#texture_additionalsimp) #ee82ee;
+}
+
+#gantChart .bar-other {
+	fill: url(#texture_other) #a300df;
+}
+</style>
+</head>
+<body>
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/gantt-chart-d3v2.js"></script>
+
+<script type="text/javascript">
+var tasks, numChairs = 0, gantHeight = 40;
+//pieChartSubcutOther(70,30);
+//pieChartPopulation(20,80);
+//pieChartRemicadeInfliximab(70,30);
+//pieChartUtilization(5,10,15,20,50);
+
+/*
+var data = [
+  {"date":"1-13","vials":100},
+  {"date":"2-13","vials":20},
+  {"date":"3-13","vials":120},
+  {"date":"4-13","vials":50},
+  {"date":"5-13","vials":140},
+  {"date":"6-13","vials":110},
+  {"date":"7-13","vials":180},
+  {"date":"8-13","vials":210},
+  {"date":"9-13","vials":160},
+  {"date":"10-13","vials":200},
+  {"date":"11-13","vials":250},
+  {"date":"12-13","vials":280}
+];
+lineGraphVialTrends(data,0);
+
+//brand 0 = Simponi ARIA
+//brand 1 = Stelara 130mg
+//brand 2 = Remicade
+*/
+
+/*
+var data = [
+  {"month":"0","vials":9},
+  {"month":"1","vials":18},
+  {"month":"2","vials":22},
+  {"month":"3","vials":22},
+  {"month":"4","vials":36},
+  {"month":"5","vials":46},
+  {"month":"6","vials":50},
+  {"month":"7","vials":50},
+  {"month":"8","vials":64},
+  {"month":"9","vials":74},
+  {"month":"10","vials":78},
+  {"month":"11","vials":88},
+  {"month":"12","vials":92}
+];
+lineGraphTimeToCapacity(data, 9, 192);
+*/
+
+/*
+var data = [
+  {"Types":"Chair Hours Occupied","Current Patient Load":33,"Full Load Schedule":105.5},
+  {"Types":"Staff Hours Utilized","Current Patient Load":10.3,"Full Load Schedule":29.4}
+];
+barGraphCapacityUsage(data,1);
+
+*/
+/*
+var data = [
+  {"name":"Current Patient Load","infusions":6},
+  {"name":"Full Load Schedule","infusions":31}
+];
+barGraphInfusionsPerWeek(data,1,0);
+
+//barGraphInfusionsPerWeek(data,brand,large);
+//brand 0 = Simponi ARIA
+//brand 1 = Stelara 130mg
+//brand 2 = Remicade
+
+*/
+
+/*
+var day="Monday", data = [
+	{"startDate":new Date("Wed Jan 01 09:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"taskName":"1","status":"SUB"},
+	{"startDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"taskName":"1","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:50:00 EST 2014"),"taskName":"1","status":"REMICADE"},
+	{"startDate":new Date("Wed Jan 01 10:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"taskName":"1","status":"ADDSIMP"},
+	{"startDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"taskName":"1","status":"ADDSTEL"},
+	{"startDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:50:00 EST 2014"),"taskName":"1","status":"ADDREM"},
+	{"startDate":new Date("Wed Jan 01 14:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"taskName":"1","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"taskName":"1","status":"SUB"},
+	{"startDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:50:00 EST 2014"),"taskName":"1","status":"OTHERIV"},
+	{"startDate":new Date("Wed Jan 01 16:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"taskName":"1","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"taskName":"1","status":"ADDREM"},
+	{"startDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:50:00 EST 2014"),"taskName":"1","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 08:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 08:10:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 08:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 08:40:00 EST 2014"),"taskName":"2","status":"SIMPONI"},
+	{"startDate":new Date("Wed Jan 01 08:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 08:50:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 11:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 11:10:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 11:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 11:40:00 EST 2014"),"taskName":"2","status":"REMICADE"},
+	{"startDate":new Date("Wed Jan 01 11:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 11:50:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"taskName":"2","status":"SUB"},
+	{"startDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:50:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"taskName":"2","status":"ADDREM"},
+	{"startDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:50:00 EST 2014"),"taskName":"2","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"taskName":"3","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:50:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 10:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"taskName":"3","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:50:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"taskName":"3","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:50:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"taskName":"3","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:50:00 EST 2014"),"taskName":"3","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 08:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 08:10:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 08:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 08:40:00 EST 2014"),"taskName":"4","status":"SUB"},
+	{"startDate":new Date("Wed Jan 01 08:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 08:50:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 11:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 11:10:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 11:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 11:40:00 EST 2014"),"taskName":"4","status":"SUB"},
+	{"startDate":new Date("Wed Jan 01 11:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 11:50:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"taskName":"4","status":"REMICADE"},
+	{"startDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:50:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"taskName":"4","status":"REMICADE"},
+	{"startDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:50:00 EST 2014"),"taskName":"4","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"taskName":"5","status":"ADDSIMP"},
+	{"startDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:50:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 10:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"taskName":"5","status":"ADDSIMP"},
+	{"startDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:50:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"taskName":"5","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:50:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"taskName":"5","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:50:00 EST 2014"),"taskName":"5","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"taskName":"6","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"taskName":"7","status":"ADDSIMP"},
+	{"startDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:50:00 EST 2014"),"taskName":"8","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 10:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"taskName":"9","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 10:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"taskName":"10","status":"ADDSIMP"},
+	{"startDate":new Date("Wed Jan 01 10:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 10:50:00 EST 2014"),"taskName":"11","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"taskName":"12","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 14:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"taskName":"13","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 14:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 14:50:00 EST 2014"),"taskName":"14","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"taskName":"15","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 16:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"taskName":"16","status":"OTHER"},
+	{"startDate":new Date("Wed Jan 01 16:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 16:50:00 EST 2014"),"taskName":"17","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:00:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"taskName":"18","status":"PREPOST"},
+	{"startDate":new Date("Wed Jan 01 09:10:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"taskName":"19","status":"ADDSIMP"},
+	{"startDate":new Date("Wed Jan 01 09:40:00 EST 2014"),"endDate":new Date("Wed Jan 01 09:50:00 EST 2014"),"taskName":"20","status":"PREPOST"}];
+console.log(gantChart(data,day,0));
+*/
+
+//removeSVG();
+
+function gantChart(data,day,spacer) {
+	$("body").attr("id","gantChart");
+	
+	// Get a distinct array of taskNames and sort them numerically
+	var taskNames = d3.set(data.map(function(d) { return d.taskName; })).values().sort(compareNumbers);
+	
+	// Prefix "Chair " to each taskName
+	for (var i = 0; i < taskNames.length; i++)
+	{
+		if (parseInt(taskNames[i]) > numChairs)
+			numChairs = parseInt(taskNames[i]);
+		taskNames[i] = "Chair " + taskNames[i];
+	}
+	
+	// Prefix "Chair " to each taskName in the original data array
+	data.forEach(function(d) {
+		d.taskName = "Chair " + d.taskName;
+	  });
+	  
+	tasks = data;
+	dayheader = day;
+	var taskStatus = {
+		"SIMPONI" : "bar-simponi",
+		"REMICADE" : "bar-remicade",
+        "STELARA" : "bar-stelara",
+		"SUB" : "bar-subcutaneous",
+		"ADDREM" : "bar-additionalrem",
+        "ADDSTEL" : "bar-additionalstel",
+		"ADDSIMP" : "bar-additionalsimp",
+		"PREPOST" : "bar-prepost",
+		"OTHER" : "bar-other"
+	};
+	
+	tasks.sort(function(a, b) {
+		return a.endDate - b.endDate;
+	});
+	var maxDate = tasks[tasks.length - 1].endDate;
+	tasks.sort(function(a, b) {
+		return a.startDate - b.startDate;
+	});
+	var minDate = tasks[0].startDate;
+	
+	var format = "%-I:%M%p";
+	var gantt = d3.gantt().taskTypes(taskNames).taskStatus(taskStatus).tickFormat(format);
+	gantt(tasks);
+
+	// Get rid of :00 from X Axis header
+	$('g.x text').each(function(){
+		$this = $(this);
+		$this.text($this.text().replace(":00",""))
+	});
+	
+	// Add spacer div if necessary
+	if (spacer == 1) 
+	{
+		$( "svg:last" ).after("<div class='spacer'></div>");
+		gantHeight += 64;
+	}
+	else
+	{
+		gantHeight += 40;	
+	}
+	
+	var svg = d3.select("svg");
+	var defs = svg.append('svg:defs');
+	defs
+	.append('svg:pattern')
+	.attr('id', 'texture_remicade')
+	.attr('patternUnits', 'userSpaceOnUse')
+	.attr('width', '10')
+	.attr('height', '100')
+	.append('svg:rect')
+	.attr('style', 'stroke:#00a0df; fill: none; stroke-width:10;')
+	.attr('x', 0)
+	.attr('y', 0)
+	.attr('width', '20')
+	.attr('height', '100');
+
+	defs
+	.append('svg:pattern')
+	.attr('id', 'texture_simponi')
+	.attr('patternUnits', 'objectBoundingBox')
+	.attr('width', '100%')
+	.attr('height', '18%')
+	.append('svg:rect')
+	.attr('style', 'stroke:#ea3765; fill: none; stroke-width:4;')
+	.attr('x', -12)
+	.attr('y', 0)
+	.attr('width', '100%')
+	.attr('height', '50');
+	
+	defs
+	.append('svg:pattern')
+	.attr('id', 'texture_other')
+	.attr('patternUnits', 'userSpaceOnUse')
+	.attr('width', '18')
+	.attr('height', '9')
+	.append('svg:rect')
+	.attr('style', 'stroke:#fff; fill: #85bb3d; stroke-width:6;')
+	.attr('x', 0)
+	.attr('y', 0)
+	.attr('width', '20')
+	.attr('height', '20');
+
+	defs
+	.append('svg:pattern')
+	.attr('id', 'texture_additionalrem')
+	.attr('patternUnits', 'userSpaceOnUse')
+	.attr('width', '5')
+	.attr('height', '5')
+	.attr('x', 3)
+	.attr('y', 3)
+	.append('svg:circle')
+	.attr('style', 'stroke: none; fill: #2e6e99;')
+	.attr('cx', 3)
+	.attr('cy', 3)
+	.attr('r', 2);
+
+	defs
+	.append('svg:pattern')
+	.attr('id', 'texture_additionalsimp')
+	.attr('patternUnits', 'userSpaceOnUse')
+	.attr('width', '9')
+	.attr('height', '9')
+	.append('svg:rect')
+	.attr('style', 'stroke:#ee82ee; fill: #fff; stroke-width:6;')
+	.attr('x', 0)
+	.attr('y', 0)
+	.attr('width', '20')
+	.attr('height', '20');
+
+    defs
+    .append('svg:pattern')
+    .attr('id', 'texture_additionalstel')
+    .attr('patternUnits', 'userSpaceOnUse')
+    .attr('width', '7')
+    .attr('height', '7')
+    .append('svg:rect')
+    .attr('style', 'stroke:#bf29c2; fill: #fff; stroke-width:6;')
+    .attr('x', 0)
+    .attr('y', 0)
+    .attr('width', '20')
+    .attr('height', '20');
+
+    defs
+    .append('svg:pattern')
+    .attr('id', 'texture_stelara')
+    .attr('patternUnits', 'userSpaceOnUse')
+    .attr('width', '5')
+    .attr('height', '5')
+    .attr('x', 2)
+    .attr('y', 2)
+    .append('svg:circle')
+    .attr('style', 'stroke: none; fill: #672ca1;')
+    .attr('cx', 2.5)
+    .attr('cy', 2.5)
+    .attr('r', 2);
+
+	defs
+    .append('svg:pattern')
+    .attr('id', 'texture_subcutaneous')
+    .attr('patternUnits', 'objectBoundingBox')
+    .attr('width', '100%')
+    .attr('height', '18%')
+    .append('svg:rect')
+    .attr('style', 'stroke:#f6c73b; fill: none; stroke-width:7;')
+    .attr('x', -12)
+    .attr('y', 0)
+    .attr('width', '100%')
+    .attr('height', '50');
+    
+	
+	return gantHeight;
+}
+
+function barGraphInfusionsPerWeek(data,brand,large) {
+	/*
+	brand 0 = Simponi ARIA
+	brand 1 = Stelara 130mg
+	brand 2 = Remicade
+	*/
+	$("body").attr("id","barGraph");
+	
+	// size adjustments for graphs when it needs to be printed
+	var columntextspacing = -10;
+	var leftmargin = 60;
+	var topmargin = 40;
+	var headerX = -55;
+	if (large == 1)
+	{
+		columntextspacing = -15;	
+		leftmargin = 100;
+		topmargin = 80;
+		headerX = -100;
+		$("body").attr("class","large");
+	}
+	
+	var w = getWidth(),
+	h = getHeight();
+
+	var margin = {top: topmargin, right: 0, bottom: 30, left: leftmargin},
+	width = w - margin.left - margin.right - 20, //width
+	height = h - margin.top - margin.bottom - 20; //height
+	
+	
+	var x = d3.scale.ordinal()
+		.rangeRoundBands([0, width], .1);
+	
+	var y = d3.scale.linear()
+		.range([height, 0]);
+	
+	var color = d3.scale.ordinal()
+    .range(["#00a0df", "#b7b7b7"]);
+	
+	var xAxis = d3.svg.axis()
+		.scale(x)
+		.tickSize(0,0)
+		.orient("bottom");
+	
+	//set ticks to 6 as it's a short graph and the default of 10 could make too many labels points
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.orient("left")
+		.tickSize(0,0)
+		.ticks(6);
+	
+	var svg = d3.select("body").append("svg")
+		.attr("class", "chart")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	  
+	x.domain(data.map(function(d) { return d.name; }));
+	y.domain([0, d3.max(data, function(d) { return d.infusions; })]);
+	
+	//Create Line
+	var header = "SIMPONI ARIA® Infusions per Week";
+	if (brand == 1) {
+		header = "STELARA® 130 mg Infusions per Week";
+		} else if (brand == 2) {
+		header = "REMICADE® Infusions per Week";
+		}
+		
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis)
+	  .append("text")
+		.attr("x", headerX)
+		.attr("y", -1 * height - 0.75 * margin.top)
+		.attr("dx", ".71em")
+		.attr("class", "axis_header")
+		.text(header);
+		
+	svg.append("g")
+		.attr("class", "y axis")
+		.call(yAxis)
+	  .append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -0.5 * height)
+		.attr("y", -0.75 * margin.left)
+		.attr("dy", ".71em")
+		.attr("class", "axis_header")
+		.text("# of Infusions");
+
+	svg.selectAll("rect")
+		.data(data)
+	  .enter().append("rect")
+		.attr("x", function(d) { return x(d.name); })
+		.attr("width", x.rangeBand())
+		.attr("y", function(d) { return y(d.infusions); })
+		.attr("height", function(d) { return height - y(d.infusions); })
+		.style("fill", function(d) { return color(d.name); });
+
+	svg.selectAll(".text")
+		.data(data)
+	  .enter().append("text")
+		.attr("class", "columnText")
+		.attr("x", function(d) { return x(d.name) + x.rangeBand()/2; })
+		.attr("y", function(d) { return y(d.infusions) + columntextspacing; })
+		.style("text-anchor", "middle")
+		.text(function(d) { return d.infusions; });
+}
+
+function barGraphCapacityUsage(data, large) {
+	$("body").attr("id","barGraph");
+	
+	// size adjustments for graphs when it needs to be printed
+	var columntextspacing = -10;
+	var leftmargin = 60;
+	var headerX = -41;
+	if (large == 1)
+	{
+		columntextspacing = -15;	
+		leftmargin = 100;
+		headerX = -70;
+		$("body").attr("class","large");
+	}
+	
+	var w = getWidth(),
+	h = getHeight();
+	
+	/*
+	//Limit the overall ratio to 0.86 for w/h
+	if (h * 0.86 > w)  
+		h = w / 0.86;
+	else
+		w = h * 0.86;
+	*/	
+	var margin = {top: 100, right: 0, bottom: 30, left: leftmargin},
+	width = w - margin.left - margin.right - 20, //width
+	height = h - margin.top - margin.bottom - 20; //height
+	
+	
+	var x0 = d3.scale.ordinal()
+		.rangeRoundBands([0, width], .1);
+	
+	var x1 = d3.scale.ordinal();
+	
+	var y = d3.scale.linear()
+		.range([height, 0]);
+	
+	var color = d3.scale.ordinal()
+		.range(["#00a0df", "#b7b7b7"]);
+	
+	var xAxis = d3.svg.axis()
+		.scale(x0)
+		.tickSize(0,0)
+		.orient("bottom");
+	
+	//set ticks to 8 as it's a short graph and the default of 10 could make too many labels points
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.orient("left")
+		.tickSize(0,0)
+		.ticks(8);
+	
+	var svg = d3.select("body").append("svg")
+		.attr("class", "chart")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	var typeNames = d3.keys(data[0]).filter(function(key) { return key !== "Types"; });
+	
+	data.forEach(function(d) {
+		d.hours = typeNames.map(function(name) { return {name: name, value: +d[name]}; });
+	});
+	
+
+	x0.domain(data.map(function(d) { return d.Types; }));
+	x1.domain(typeNames).rangeRoundBands([0, x0.rangeBand()]);
+	y.domain([0, d3.max(data, function(d) { return d3.max(d.hours, function(d) { return d.value; }); })]);
+	
+	svg.append("g")
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis)
+	  .append("text")
+		.attr("x", headerX)
+		.attr("y", -1 * height - 0.75 * margin.top)
+		.attr("dx", ".71em")
+		.attr("class", "axis_header")
+		.text("Capacity Usage");
+	
+	svg.append("g")
+		.attr("class", "y axis")
+		.call(yAxis)
+	  .append("text")
+		.attr("transform", "rotate(-90)")
+		.attr("x", -0.5 * height)
+		.attr("y", -0.65 * margin.left)
+		.attr("dy", ".71em")
+		.attr("class", "axis_header")
+		.text("Hours");
+
+	var columns = svg.selectAll(".columns")
+		.data(data)
+	  .enter().append("g")
+		.attr("class", "columns")
+		.attr("transform", function(d) { return "translate(" + x0(d.Types) + ",0)"; });
+	
+	columns.selectAll("rect")
+		.data(function(d) { return d.hours; })
+	  .enter().append("rect")
+		.attr("width", x1.rangeBand())
+		.attr("x", function(d) { return x1(d.name); })
+		.attr("y", function(d) { return y(d.value); })
+		.attr("height", function(d) { return height - y(d.value); })
+		.style("fill", function(d) { return color(d.name); });
+
+	columns.append("text")
+		.attr("class", "columnText")
+		.attr("x", function(d) { return x1(d.hours[0].name) + x1.rangeBand()/2; })
+		.attr("y", function(d, i) { return y(d.hours[0].value) + columntextspacing; })
+		.style("text-anchor", "middle")
+		.text(function(d, i) { return d.hours[0].value; });	
+	
+	columns.append("text")
+		.attr("class", "columnText")
+		.attr("x", function(d) { return x1(d.hours[1].name) + x1.rangeBand()/2; })
+		.attr("y", function(d, i) { return y(d.hours[1].value) + columntextspacing; })
+		.style("text-anchor", "middle")
+		.text(function(d, i) { return d.hours[1].value; });	
+
+	var legend = svg.selectAll(".legend")
+		.data(typeNames.slice())
+	  .enter().append("g")
+		.attr("class", "legend")
+		.attr("transform", function(d, i) { return "translate(" + (i * width * 0.65 - margin.left * 0.5) + "," + margin.top/-2 + ")"; });
+	
+	legend.append("rect")
+		//.attr("x", width - 18)
+		.attr("width", 18)
+		.attr("height", 18)
+		.style("fill", color);
+	
+	legend.append("text")
+		//.attr("x", width - 24)
+		.attr("x", 25)
+		.attr("y", 9)
+		.attr("dy", ".35em")
+		.style("text-anchor", "start")
+		.text(function(d) { return d; });
+	
+}
+function lineGraphVialTrends(data,brand) {	
+	/*
+	brand 0 = Simponi ARIA
+	brand 1 = Stelara 130mg
+	brand 2 = Remicade
+	*/
+	$("body").attr("id","lineGraph");
+	var w = getWidth(),
+	h = getHeight();
+	
+	//Limit the overall ratio to 1/2.33 for h/w
+	if (h * 2.6 > w)
+		h = w / 2.6;
+	else
+		w = h * 2.6;
+
+	var margin = {top: 60, right: 60, bottom: 30, left: 100},
+	width = w - margin.left - margin.right - 20, //width
+	height = h - margin.top - margin.bottom - 20; //height
+	
+	var parseDate = d3.time.format("%m-%y").parse,
+		bisectDate = d3.bisector(function(d) { return d.date; }).left;
+
+	//Create scale functions
+	var x = d3.time.scale()
+		.range([0, width]);
+	
+	var y = d3.scale.linear()
+		.range([height, 0]);
+	
+	//Define X axis
+	var xAxis = d3.svg.axis()
+		.scale(x)
+		.tickFormat(d3.time.format("%-m/%y"))
+		.tickSize(0,0)
+		.tickPadding(10)
+		.orient("bottom");
+	
+	//Define Y axis
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.tickSize(-width - margin.right,0,0)
+		.tickPadding(10)
+		.orient("left");
+	
+	//Define Line
+	var line = d3.svg.line()
+		.x(function(d) { return x(d.date); })
+		.y(function(d) { return y(d.vials); });
+	
+	//Create SVG element
+	var svg = d3.select("body").append("svg")
+		.attr("class", "chart")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	  data.forEach(function(d) {
+		d.date = parseDate(d.date);
+		d.vials = +d.vials;
+	  });
+	  data.sort(function(a, b) {
+		return a.date - b.date;
+	  });
+
+	  x.domain([data[0].date, data[data.length - 1].date]);
+	  y.domain([0,d3.max(data, function(d) { return d.vials; })]);
+	
+	  //Create X axis
+	  svg.append("g")
+		  .attr("class", "x axis")
+		  .attr("transform", "translate(0," + height + ")")
+		  .call(xAxis)
+		.append("text")
+		  .attr("x", (width -margin.left - margin.right)/2)
+		  .attr("y", -1 * height - margin.top/2)
+		  .attr("dx", ".71em")
+		  .attr("class", "axis_header")
+		  .text("PAST 12 MONTHS");
+	
+	  //Create Y axis
+	  svg.append("g")
+		  .attr("class", "y axis")
+		  .call(yAxis)
+		.append("text")
+		  .attr("transform", "rotate(-90)")
+		  .attr("x", -1 * height/2)
+		  .attr("y", -3 * margin.left/4)
+		  .attr("dy", ".71em")
+		  .attr("class", "axis_header")
+		  .text("VIALS");
+
+	  //Create Line
+	  var lineClass = "line";
+	  if (brand == 1) {
+	  	lineClass = "line stelara";
+		} else if (brand == 2) {
+	  	lineClass = "line remicade";
+		}
+	  svg.append("path")
+		  .datum(data)
+		  .attr("class", lineClass)
+		  .attr("d", line);
+
+	  //Get trend line, xval is just 0 to 11 for 12 dates, yval is all the vials data	
+	  var xval = [0,1,2,3,4,5,6,7,8,9,10,11];
+	  var yval = data.map(function(d){return d.vials;});
+	  var lr = linearRegression(yval,xval);
+	  // now you have: lr.slope, lr.intercept, lr.r2
+
+	  var max = d3.max(xval);
+
+	  svg.append("svg:line")
+		  .attr("x1", x(data[0].date))
+		  .attr("y1", y(lr.intercept))
+		  .attr("x2", x(data[max].date))
+		  .attr("y2", y( (max * lr.slope) + lr.intercept ))
+		  .style("stroke-dasharray", ("10,4"))
+		  .attr("class", lineClass);
+			
+	/*
+	  var focus = svg.append("g")
+		  .attr("class", "focus")
+		  .style("display", "none");
+	
+	  focus.append("circle")
+		  .attr("r", 4.5);
+	
+	  focus.append("text")
+		  .attr("x", 9)
+		  .attr("dy", ".35em");
+	
+	  svg.append("rect")
+		  .attr("class", "overlay")
+		  .attr("width", width)
+		  .attr("height", height)
+		  .on("mouseover", function() { focus.style("display", null); })
+		  .on("mouseout", function() { focus.style("display", "none"); })
+		  .on("mousemove", mousemove);
+	
+	  function mousemove() {
+		var x0 = x.invert(d3.mouse(this)[0]),
+			i = bisectDate(data, x0, 1),
+			d0 = data[i - 1],
+			d1 = data[i],
+			d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+		focus.attr("transform", "translate(" + x(d.date) + "," + y(d.vials) + ")");
+		focus.select("text").text(d.vials);
+	  }*/
+	
+}
+
+
+function pieChartUtilization(simponi, stelara, remicade, subcutaneous, other) {
+	$("body").attr("id","pieChart");
+	var extraRadius = 30, //how much to shrink the NonBiologics pie by
+	w = getWidth()-6, //width
+	h = getHeight()-6, //height
+	r = h/2, //radius,
+	//color = d3.scale.category20c(); //builtin range of colors
+	color = d3.scale.ordinal().range(["#ed1556","#5d2e81","#20a0dc","#f6c73b","#82bc46"]);  //set to custom colors
+	if (w<h)   //restrict r by width if it's smaller than the height
+		r = w/2;
+
+	data = [{"value":simponi},{"value":stelara},{"value":remicade},{"value":subcutaneous},{"value":other}]; //set to custom percentage values
+	var vis = d3.select("body")
+	.append("svg:svg") //create the SVG element inside the <body>
+	.data([data]) //associate our data with the document
+	.attr("width", w) //set the width and height of our visualization (these will be attributes of the <svg> tag
+	.attr("height", h)
+	.attr("class", "chart")
+	.append("svg:g") //make a group to hold our pie chart
+	.attr("transform", "translate(" + r + "," + r + ")"); //move the center of the pie chart from 0, 0 to radius, radius
+
+	var arcOver = d3.svg.arc() //this will create <path> elements for us using arc data for the bigger slice
+	.outerRadius(r);
+	
+	var arc = d3.svg.arc() //this will create <path> elements for us using arc data
+	.outerRadius(r - extraRadius);
+	 
+	var pie = d3.layout.pie() //this will create arc data for us given a list of values
+	.value(function(d) { return d.value; }) //we must tell it out to access the value of each element in our data array
+	.sort(null); 
+	 
+	var arcs = vis.selectAll("g.slice") //this selects all <g> elements with class slice (there aren't any yet)
+	.data(pie) //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+	.enter() //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+	.append("svg:g") //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+	.attr("class", "slice"); //allow us to style things in the slices (like text)
+
+	arcs.append("svg:path")
+	.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+	//.attr("d", function(d) { d.arc.outerRadius(r + 50); });
+	.attr("d", function(d, i) { if (i==3 || i == 4) {return arc(d);} else return arcOver(d); });  // make non-biologics slices smaller in radius
+	//.attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+}
+
+function pieChartPopulation(biologic, nonbiologic) {
+	$("body").attr("id","pieChart");
+	var extraRadius = 30, //how much to shrink the NonBiologics pie by
+	w = getWidth()-6, //width
+	h = getHeight()-6, //height
+	r = h/2, //radius,
+	//color = d3.scale.category20c(); //builtin range of colors
+	color = d3.scale.ordinal().range(["#0e5c80","#20a0dc"]);  //set to custom colors
+	if (w<h)   //restrict r by width if it's smaller than the height
+		r = w/2;
+
+	data = [{"value":biologic},{"value":nonbiologic}]; //set to custom percentage values
+	var vis = d3.select("body")
+	.append("svg:svg") //create the SVG element inside the <body>
+	.data([data]) //associate our data with the document
+	.attr("width", w) //set the width and height of our visualization (these will be attributes of the <svg> tag
+	.attr("height", h)
+	.attr("class", "chart")
+	.append("svg:g") //make a group to hold our pie chart
+	.attr("transform", "translate(" + r + "," + r + ")"); //move the center of the pie chart from 0, 0 to radius, radius
+
+	var arcOver = d3.svg.arc() //this will create <path> elements for us using arc data for the bigger slice
+	.outerRadius(r);
+	
+	var arc = d3.svg.arc() //this will create <path> elements for us using arc data
+	.outerRadius(r - extraRadius);
+	 
+	var pie = d3.layout.pie() //this will create arc data for us given a list of values
+	.value(function(d) { return d.value; }) //we must tell it out to access the value of each element in our data array
+	.sort(null); 
+	 
+	var arcs = vis.selectAll("g.slice") //this selects all <g> elements with class slice (there aren't any yet)
+	.data(pie) //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+	.enter() //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+	.append("svg:g") //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+	.attr("class", "slice"); //allow us to style things in the slices (like text)
+
+	arcs.append("svg:path")
+	.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+	//.attr("d", function(d) { d.arc.outerRadius(r + 50); });
+	.attr("d", function(d, i) { if (i==1) {return arc(d);} else return arcOver(d); });  // make non-biologics slices smaller in radius
+	//.attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+}
+
+function pieChartSubcutOther(subcut, other) {
+	$("body").attr("id","pieChart");
+	w = getWidth()-20, //width
+	h = getHeight()-20, //height
+	r = h/2, //radius,
+	//color = d3.scale.category20c(); //builtin range of colors
+	color = d3.scale.ordinal().range(["#87c32f","#f6c73b"]);  //set to custom colors
+	if (w<h)   //restrict r by width if it's smaller than the height
+		r = w/2;
+
+	data = [{"value":other},{"value":subcut}]; //set to custom percentage values
+	var vis = d3.select("body")
+	.append("svg:svg") //create the SVG element inside the <body>
+	.data([data]) //associate our data with the document
+	.attr("width", w) //set the width and height of our visualization (these will be attributes of the <svg> tag
+	.attr("height", h)
+	.attr("class", "chart")
+	.append("svg:g") //make a group to hold our pie chart
+	.attr("transform", "translate(" + r + "," + r + ")"); //move the center of the pie chart from 0, 0 to radius, radius
+	
+	var arc = d3.svg.arc() //this will create <path> elements for us using arc data
+	.outerRadius(r);
+	 
+	var pie = d3.layout.pie() //this will create arc data for us given a list of values
+	.value(function(d) { return d.value; }) //we must tell it out to access the value of each element in our data array
+	.sort(null); 
+	 
+	var arcs = vis.selectAll("g.slice") //this selects all <g> elements with class slice (there aren't any yet)
+	.data(pie) //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+	.enter() //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+	.append("svg:g") //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+	.attr("class", "slice"); //allow us to style things in the slices (like text)
+
+	arcs.append("svg:path")
+	.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+	//.attr("d", function(d) { d.arc.outerRadius(r + 50); });
+	//.attr("d", function(d, i) { if (i==1) {return arc(d);} else return arcOver(d); });  // make non-biologics slices smaller in radius
+	.attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+}
+
+
+function pieChartRemicadeInfliximab(remicade, infliximab) {
+	$("body").attr("id","pieChart");
+	var extraRadius = 30, //how much to shrink the NonBiologics pie by
+	w = getWidth()-6, //width
+	h = getHeight()-6, //height
+	r = h/2, //radius,
+	//color = d3.scale.category20c(); //builtin range of colors
+	color = d3.scale.ordinal().range(["#20a0dc","#82bc46"]);  //set to custom colors
+	if (w<h)   //restrict r by width if it's smaller than the height
+		r = w/2;
+
+	data = [{"value":remicade},{"value":infliximab}]; //set to custom percentage values
+	var vis = d3.select("body")
+	.append("svg:svg") //create the SVG element inside the <body>
+	.data([data]) //associate our data with the document
+	.attr("width", w) //set the width and height of our visualization (these will be attributes of the <svg> tag
+	.attr("height", h)
+	.attr("class", "chart")
+	.append("svg:g") //make a group to hold our pie chart
+	.attr("transform", "translate(" + r + "," + r + ")"); //move the center of the pie chart from 0, 0 to radius, radius
+
+	var arcOver = d3.svg.arc() //this will create <path> elements for us using arc data for the bigger slice
+	.outerRadius(r);
+	
+	var arc = d3.svg.arc() //this will create <path> elements for us using arc data
+	.outerRadius(r - extraRadius);
+	 
+	var pie = d3.layout.pie() //this will create arc data for us given a list of values
+	.value(function(d) { return d.value; }) //we must tell it out to access the value of each element in our data array
+	.sort(null); 
+	 
+	var arcs = vis.selectAll("g.slice") //this selects all <g> elements with class slice (there aren't any yet)
+	.data(pie) //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
+	.enter() //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+	.append("svg:g") //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+	.attr("class", "slice"); //allow us to style things in the slices (like text)
+
+	arcs.append("svg:path")
+	.attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+	//.attr("d", function(d) { d.arc.outerRadius(r + 50); });
+	.attr("d", function(d, i) { if (i==1) {return arc(d);} else return arcOver(d); });  // make non-biologics slices smaller in radius
+	//.attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+}
+
+function lineGraphTimeToCapacity(data, currentInfusions, availableCapacity) {
+	$("body").attr("id","lineGraph");
+	var w = getWidth(),
+	h = getHeight();
+	
+	//Limit the overall ratio to 1/2.33 for h/w
+	if (h * 2.6 > w)
+		h = w / 2.6;
+	else
+		w = h * 2.6;
+
+	var margin = {top: 30, right: 60, bottom: 60, left: 100},
+	width = w - margin.left - margin.right - 20, //width
+	height = h - margin.top - margin.bottom - 20; //height
+	
+	var parseDate = d3.time.format("%m").parse;
+
+	//Create scale functions
+	var x = d3.scale.linear()
+		.range([0, width]);
+	
+	var y = d3.scale.linear()
+		.range([height, 0]);
+	
+	data.forEach(function(d) {
+		d.month = +d.month;
+		d.vials = +d.vials;
+	  });
+	data.sort(function(a, b) {
+		return a.month - b.month;
+	  });
+
+	var ymax = d3.max(data, function(d) { return d.vials; });
+	if (ymax < availableCapacity)
+		ymax = availableCapacity;
+
+	x.domain([data[0].month, data[data.length - 1].month]);
+	y.domain([0,ymax]);
+	
+	//Define X axis
+	var xAxis = d3.svg.axis()
+		.scale(x)
+		//.tickFormat(d3.time.format("%-m/%y"))
+		.tickSize(0,0)
+		.tickPadding(10)
+		.orient("bottom");
+	
+	//Define Y axis
+	var yAxis = d3.svg.axis()
+		.scale(y)
+		.tickSize(-width - margin.right,0,0)
+		.tickPadding(10)
+		.orient("left");
+	
+	//Define Line
+	var line = d3.svg.line()
+		.x(function(d) { return x(d.month); })
+		.y(function(d) { return y(d.vials); });
+		
+	//Create SVG element
+	var svg = d3.select("body").append("svg")
+		.attr("class", "chart")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+	
+	//Define Area: Reference - http://www.d3noob.org/2013/01/filling-area-under-graph.html
+	var area = d3.svg.area()
+		.x(function(d) { return x(d.month); })
+		.y0(y(availableCapacity * 0.6))
+		.y1(y(availableCapacity * 0.8));
+		
+	  //Create X axis
+	  svg.append("g")
+		  .attr("class", "x axis")
+		  .attr("transform", "translate(0," + height + ")")
+		  .call(xAxis)
+		.append("text")
+		  .attr("x", (width -margin.left - margin.right)/2)
+		  .attr("y", margin.bottom)
+		  .attr("dx", ".71em")
+		  .attr("class", "axis_header")
+		  .text("MONTHS");
+	
+	  //Create Y axis
+	  svg.append("g")
+		  .attr("class", "y axis")
+		  .call(yAxis)
+		.append("text")
+		  .attr("transform", "rotate(-90)")
+		  .attr("x", -1 * height/2)
+		  .attr("y", -3 * margin.left/4)
+		  .attr("dy", ".71em")
+		  .attr("class", "axis_header")
+		  .text("NUMBER OF INFUSIONS");
+
+	  //Create 60% to 80% sweet spot
+	  svg.append("path")
+        .datum(data)
+        .attr("class", "area")
+        .attr("d", area);
+		
+	  //Create Line
+	  var lineClass = "line";
+	  svg.append("path")
+		  .datum(data)
+		  .attr("class", lineClass)
+		  .attr("d", line);
+
+	  //Create currentInfusions line
+	  lineClass = "line currentInfusions";
+	  svg.append("svg:line")
+		  .attr("x1", x(0))
+		  .attr("y1", y(currentInfusions))
+		  .attr("x2", x(12))
+		  .attr("y2", y(currentInfusions))
+		  .style("stroke-dasharray", ("10,4"))
+		  .attr("class", lineClass);
+		  
+	  //Create availableCapacity line
+	  lineClass = "line availableCapacity";
+	  svg.append("svg:line")
+		  .attr("x1", x(0))
+		  .attr("y1", y(availableCapacity))
+		  .attr("x2", x(12))
+		  .attr("y2", y(availableCapacity))
+		  .style("stroke-dasharray", ("10,4"))
+		  .attr("class", lineClass);
+}
+
+function compareNumbers(a, b) {
+  return a - b;
+}
+function getHeight() {
+	return $(window).height();
+}
+function getWidth() {
+	return $(window).width();
+}
+function linearRegression(y,x){
+        var lr = {};
+        var n = y.length;
+        var sum_x = 0;
+        var sum_y = 0;
+        var sum_xy = 0;
+        var sum_xx = 0;
+        var sum_yy = 0;
+
+        for (var i = 0; i < y.length; i++) {
+
+            sum_x += x[i];
+            sum_y += y[i];
+            sum_xy += (x[i]*y[i]);
+            sum_xx += (x[i]*x[i]);
+            sum_yy += (y[i]*y[i]);
+        } 
+
+        lr['slope'] = (n * sum_xy - sum_x * sum_y) / (n*sum_xx - sum_x * sum_x);
+        lr['intercept'] = (sum_y - lr.slope * sum_x)/n;
+        lr['r2'] = Math.pow((n*sum_xy - sum_x*sum_y)/Math.sqrt((n*sum_xx-sum_x*sum_x)*(n*sum_yy-sum_y*sum_y)),2);
+
+        return lr;
+
+};
+function removeSVG() {
+	$("svg.chart").remove();
+	$("div.spacer").remove();	
+	$("body").removeAttr("id");
+	gantHeight = 40;
+    numChairs = 0;
+}
+</script>
+
+</body>
+</html>

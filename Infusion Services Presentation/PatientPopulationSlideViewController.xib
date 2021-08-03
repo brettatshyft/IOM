@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PatientPopulationSlideViewController">
+            <connections>
+                <outlet property="NoDataLabel" destination="sSm-bN-Wn0" id="k2E-Dt-MMi"/>
+                <outlet property="biologicNumberLabel" destination="t01-PI-dMJ" id="Ue2-0j-rQF"/>
+                <outlet property="biologicPercentLabel" destination="aLY-Ch-qZg" id="1OZ-WF-3aN"/>
+                <outlet property="chartContainerView" destination="atR-6Q-0aH" id="AtK-fc-bCi"/>
+                <outlet property="nonBiologicNumberLabel" destination="pSR-cf-kEs" id="Lru-WW-YhQ"/>
+                <outlet property="nonBiologicPercentLabel" destination="gwe-Yh-Mm8" id="6Ii-ye-2tw"/>
+                <outlet property="patientPopulationLabel" destination="LbZ-v4-upf" id="QX3-F5-KhB"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(N=Total Number)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-v4-upf" customClass="IOMCustomFontKarbonBoldLabel">
+                    <rect key="frame" x="817" y="55" width="161" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.36078431370000003" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBo-iu-Pwt">
+                    <rect key="frame" x="46" y="96" width="932" height="400"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLY-Ch-qZg" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="725" y="66" width="118" height="117"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="100"/>
+                            <color key="textColor" red="0.0" green="0.36078431370000003" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgx-Ax-UgQ" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="839" y="61" width="42" height="70"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="60"/>
+                            <color key="textColor" red="0.0" green="0.36078431370000003" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Biologic Patients (n=12)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t01-PI-dMJ" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="696" y="157" width="233" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.36078431370000003" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="66" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-Yh-Mm8" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="712" y="205" width="52" height="56"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="48"/>
+                            <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIz-bs-FZX" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="765" y="202" width="20" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="Qdf-5X-fgz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="28"/>
+                            <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-biologic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7z7-l5-LWz" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="696" y="252" width="88" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="patients (n=6)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSR-cf-kEs" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="696" y="270" width="100" height="18"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Person-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="3a0-tv-91M">
+                            <rect key="frame" x="696" y="91" width="19" height="59"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="19" id="CBK-Q8-Czv"/>
+                                <constraint firstAttribute="height" constant="59" id="IWh-aa-rq9"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="person-small.png" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-7A-luS">
+                            <rect key="frame" x="696" y="217" width="10" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="29" id="tP4-oB-f2F"/>
+                                <constraint firstAttribute="width" constant="10" id="tVn-CR-cUj"/>
+                            </constraints>
+                        </imageView>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSm-bN-Wn0" customClass="IOMCustomFontKarbonBoldLabel">
+                            <rect key="frame" x="417" y="173" width="163" height="54"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atR-6Q-0aH">
+                            <rect key="frame" x="290" y="35" width="329" height="329"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="7z7-l5-LWz" firstAttribute="top" secondItem="sIz-bs-FZX" secondAttribute="bottom" constant="17" id="0jm-R1-Z2M"/>
+                        <constraint firstItem="gwe-Yh-Mm8" firstAttribute="leading" secondItem="IRB-7A-luS" secondAttribute="trailing" constant="6" id="6ow-lE-nsf"/>
+                        <constraint firstItem="t01-PI-dMJ" firstAttribute="top" secondItem="aLY-Ch-qZg" secondAttribute="bottom" constant="-26" id="9tn-tO-YLr"/>
+                        <constraint firstItem="3a0-tv-91M" firstAttribute="top" secondItem="CBo-iu-Pwt" secondAttribute="top" constant="91" id="AGn-Zw-J1o"/>
+                        <constraint firstItem="pSR-cf-kEs" firstAttribute="leading" secondItem="7z7-l5-LWz" secondAttribute="leading" id="AVL-Q3-biP"/>
+                        <constraint firstItem="7z7-l5-LWz" firstAttribute="top" secondItem="gwe-Yh-Mm8" secondAttribute="bottom" constant="-9" id="FIl-yV-nvy"/>
+                        <constraint firstItem="t01-PI-dMJ" firstAttribute="leading" secondItem="IRB-7A-luS" secondAttribute="leading" id="Fv1-Xo-8Td"/>
+                        <constraint firstAttribute="trailing" secondItem="t01-PI-dMJ" secondAttribute="trailing" constant="3" id="H3M-I7-yGK"/>
+                        <constraint firstItem="t01-PI-dMJ" firstAttribute="top" secondItem="Lgx-Ax-UgQ" secondAttribute="bottom" constant="26" id="HrA-D2-Ldd"/>
+                        <constraint firstItem="pSR-cf-kEs" firstAttribute="top" secondItem="7z7-l5-LWz" secondAttribute="bottom" id="JOH-su-wuG"/>
+                        <constraint firstItem="IRB-7A-luS" firstAttribute="top" secondItem="t01-PI-dMJ" secondAttribute="bottom" constant="36" id="LQ6-RP-Z7G"/>
+                        <constraint firstItem="sIz-bs-FZX" firstAttribute="leading" secondItem="CBo-iu-Pwt" secondAttribute="leading" constant="765" id="MeC-v6-wSH"/>
+                        <constraint firstItem="aLY-Ch-qZg" firstAttribute="leading" secondItem="3a0-tv-91M" secondAttribute="trailing" constant="10" id="NAE-cJ-ut2"/>
+                        <constraint firstItem="t01-PI-dMJ" firstAttribute="leading" secondItem="3a0-tv-91M" secondAttribute="leading" id="OD8-zD-Ewl"/>
+                        <constraint firstItem="sIz-bs-FZX" firstAttribute="leading" secondItem="gwe-Yh-Mm8" secondAttribute="trailing" constant="1" id="ZlD-ZE-5uS"/>
+                        <constraint firstItem="t01-PI-dMJ" firstAttribute="top" secondItem="3a0-tv-91M" secondAttribute="bottom" constant="7" id="a1q-t7-y28"/>
+                        <constraint firstItem="7z7-l5-LWz" firstAttribute="top" secondItem="IRB-7A-luS" secondAttribute="bottom" constant="6" id="idj-TX-Wde"/>
+                        <constraint firstItem="Lgx-Ax-UgQ" firstAttribute="leading" secondItem="aLY-Ch-qZg" secondAttribute="trailing" constant="-4" id="kEC-23-Spe"/>
+                        <constraint firstItem="sIz-bs-FZX" firstAttribute="leading" secondItem="gwe-Yh-Mm8" secondAttribute="trailing" constant="1" id="mlt-gk-roc"/>
+                        <constraint firstAttribute="bottom" secondItem="sIz-bs-FZX" secondAttribute="bottom" constant="165" id="qJB-OB-DWD"/>
+                        <constraint firstItem="sIz-bs-FZX" firstAttribute="top" secondItem="aLY-Ch-qZg" secondAttribute="bottom" constant="19" id="uwv-Ng-Hig"/>
+                        <constraint firstItem="7z7-l5-LWz" firstAttribute="leading" secondItem="IRB-7A-luS" secondAttribute="leading" id="zen-sW-MaT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CBo-iu-Pwt" firstAttribute="top" secondItem="2" secondAttribute="top" constant="96" id="8yh-9m-BJI"/>
+                <constraint firstItem="CBo-iu-Pwt" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="46" id="AZU-0R-8OR"/>
+                <constraint firstItem="CBo-iu-Pwt" firstAttribute="trailing" secondItem="LbZ-v4-upf" secondAttribute="trailing" id="ck9-Oi-e3x"/>
+                <constraint firstItem="CBo-iu-Pwt" firstAttribute="top" secondItem="LbZ-v4-upf" secondAttribute="bottom" constant="17" id="guB-Tr-Zhb"/>
+                <constraint firstItem="CBo-iu-Pwt" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="jLa-Ej-EiK"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Person-large.png" width="19" height="59"/>
+        <image name="person-small.png" width="9" height="28"/>
+    </resources>
+</document>

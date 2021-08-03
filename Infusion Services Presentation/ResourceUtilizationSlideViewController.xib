@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResourceUtilizationSlideViewController">
+            <connections>
+                <outlet property="infusionImageView" destination="GHe-Om-2FU" id="h6Z-5g-v24"/>
+                <outlet property="longShortButton" destination="L53-ai-SGn" id="pQ7-lo-4NP"/>
+                <outlet property="thirtyMinuteInfusionButton" destination="9jC-uv-g1E" id="KJu-tE-lBl"/>
+                <outlet property="twoHourButton" destination="5Bq-bW-neB" id="tel-Jd-vO7"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Ked-sT-c8g">
+                    <rect key="frame" x="454" y="199" width="525" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-uv-g1E" customClass="IOMRoundedArrowButton">
+                            <rect key="frame" x="0.0" y="0.0" width="153" height="44"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="153" id="GWd-rC-kcP"/>
+                                <constraint firstAttribute="height" constant="44" id="jhB-2F-JtL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="30-Minute Infusion">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="longShortButtonSelected:" destination="-1" eventType="touchUpInside" id="AR0-GE-h7E"/>
+                                <action selector="thirtyMinuteInfusion:" destination="-1" eventType="touchUpInside" id="Um6-rq-eak"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bq-bW-neB" customClass="IOMRoundedArrowButton">
+                            <rect key="frame" x="186" y="0.0" width="153" height="44"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="153" id="Jx2-ag-d5N"/>
+                                <constraint firstAttribute="height" constant="44" id="kbd-kH-mz1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="2-Hour Infusion">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="twoHourButtonSelected:" destination="-1" eventType="touchUpInside" id="FIW-NL-mH6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L53-ai-SGn" customClass="IOMRoundedArrowButton">
+                            <rect key="frame" x="372" y="0.0" width="153" height="44"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="0wh-va-5Hy"/>
+                                <constraint firstAttribute="width" constant="153" id="qIg-SA-8uK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Long/Short Infusions">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="longShortButtonSelected:" destination="-1" eventType="touchUpInside" id="hsN-aD-VIL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHe-Om-2FU">
+                    <rect key="frame" x="47" y="256" width="930" height="373"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="373" id="u2u-IQ-Tzi"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GHe-Om-2FU" secondAttribute="trailing" constant="47" id="A9b-GK-FoE"/>
+                <constraint firstItem="GHe-Om-2FU" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="47" id="DIu-22-Wdf"/>
+                <constraint firstAttribute="bottom" secondItem="GHe-Om-2FU" secondAttribute="bottom" constant="139" id="PgM-5N-MCb"/>
+                <constraint firstItem="GHe-Om-2FU" firstAttribute="top" secondItem="Ked-sT-c8g" secondAttribute="bottom" constant="13" id="qvk-RX-4KK"/>
+                <constraint firstAttribute="trailing" secondItem="Ked-sT-c8g" secondAttribute="trailing" constant="45" id="sYf-OH-kBK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportCoverPageViewController">
+            <connections>
+                <outlet property="accountNameLabel" destination="uub-jN-3E6" id="fXT-MX-dmt"/>
+                <outlet property="dateLabel" destination="9bJ-UW-UvC" id="QE3-o1-wo5"/>
+                <outlet property="scenarioLabel" destination="OYZ-RT-USs" id="rdl-h9-TpY"/>
+                <outlet property="simponiLabel" destination="A3d-an-SI5" id="PYT-fC-q0z"/>
+                <outlet property="stelaraLabel" destination="e1l-8e-gyX" id="cqg-CZ-7ZG"/>
+                <outlet property="view" destination="1" id="Iv3-rN-1wy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="1250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scenario name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-RT-USs" customClass="IOMCustomFontBoldLabel">
+                    <rect key="frame" x="50" y="151.5" width="924" height="53"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                    <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/01/2014" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bJ-UW-UvC" customClass="IOMCustomFontLabel">
+                    <rect key="frame" x="50" y="102.5" width="124" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uub-jN-3E6" customClass="IOMCustomFontBoldLabel">
+                    <rect key="frame" x="50" y="45" width="924" height="38.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                    <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v3X-XT-ycu">
+                    <rect key="frame" x="50" y="254.5" width="924" height="248"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclosure:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmc-cF-NN9" customClass="IOMCustomFontBoldLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="92" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="944" translatesAutoresizingMaskIntoConstraints="NO" id="9L7-gl-7r4" customClass="IOMCustomFontLabel">
+                            <rect key="frame" x="0.0" y="40.5" width="924" height="86"/>
+                            <string key="text">The information presented is for informational purposes only and is not intended to represent a promise, guarantee or legal advice by Janssen Biotech, Inc. about coverage, levels of reimbursement, payments, billings or practice efficiencies. 
+Please consult with your legal counsel or reimbursement specialist for advice specific to your institution.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please see the full Prescribing Information for REMICADE®" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqa-Ht-ZeY" customClass="IOMCustomFontLabel">
+                            <rect key="frame" x="0.0" y="146.5" width="443.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please see the full Prescribing Information for SIMPONI ARIA®" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3d-an-SI5" customClass="IOMCustomFontLabel">
+                            <rect key="frame" x="0.0" y="187" width="469" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please see the full Prescribing Information for STELARA®" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1l-8e-gyX" customClass="IOMCustomFontLabel">
+                            <rect key="frame" x="0.0" y="227.5" width="431.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.30588235289999999" green="0.31372549020000001" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OYZ-RT-USs" secondAttribute="trailing" constant="50" id="5U9-rC-2Ma"/>
+                <constraint firstItem="uub-jN-3E6" firstAttribute="top" secondItem="1" secondAttribute="top" constant="45" id="AVx-tx-rBb"/>
+                <constraint firstItem="uub-jN-3E6" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="50" id="GfF-s0-fks"/>
+                <constraint firstItem="9bJ-UW-UvC" firstAttribute="leading" secondItem="OYZ-RT-USs" secondAttribute="leading" id="HHZ-bS-PXg"/>
+                <constraint firstAttribute="trailing" secondItem="uub-jN-3E6" secondAttribute="trailing" constant="50" id="LGn-A4-Gtr"/>
+                <constraint firstAttribute="trailing" secondItem="v3X-XT-ycu" secondAttribute="trailing" constant="50" id="O4g-i6-H5p"/>
+                <constraint firstItem="uub-jN-3E6" firstAttribute="leading" secondItem="9bJ-UW-UvC" secondAttribute="leading" id="RhV-Te-ptp"/>
+                <constraint firstItem="OYZ-RT-USs" firstAttribute="top" secondItem="9bJ-UW-UvC" secondAttribute="bottom" constant="19" id="j2k-j6-btz"/>
+                <constraint firstItem="v3X-XT-ycu" firstAttribute="top" secondItem="OYZ-RT-USs" secondAttribute="bottom" constant="50" id="rnq-0C-3SD"/>
+                <constraint firstItem="9bJ-UW-UvC" firstAttribute="top" secondItem="uub-jN-3E6" secondAttribute="bottom" constant="19" id="xoJ-Gd-LGx"/>
+                <constraint firstItem="v3X-XT-ycu" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="50" id="zl1-Kx-LWt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.28125" y="148.828125"/>
+        </view>
+    </objects>
+</document>
